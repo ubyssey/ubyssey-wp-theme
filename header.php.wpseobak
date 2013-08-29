@@ -1,0 +1,219 @@
+<?php
+/*
+ * The Header for The Ubyssey 2012 theme. 
+ * Leaves .l-content open.
+ *
+ */
+?>
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+
+	<!-- @TODO: Use Yoast SEO plugin to deal with title and description -->
+  	<title><?php wp_title( '|', true, 'right'); bloginfo( 'name' ); ?></title>
+
+	<!-- Compiled to from various LESS files -->
+	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
+
+	<!-- @TODO: Don't forget to add favicon.ico to root -->	
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
+
+	<!-- The only script that gets loaded directly in header because it has to load first on every page -->
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/modernizr-2.5.3.min.js"></script>
+
+	<!-- jQuery loaded here just so that I can write inline for dev @TODO: fix all scripts -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+	<!-- fitvid - responsive videos -->
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.fitvids.js"></script>
+	<script>
+	  $(document).ready(function(){
+	    // Target your .container, .wrapper, .post, etc.
+	    $(".video").fitVids();
+	  });
+	</script>
+
+	<!-- to make select nav work -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("select.show-mobile").bind( "change", function(event, ui) {
+			window.location = $(this).find("option:selected").val();
+		});
+	});
+	</script>
+
+	<!-- to make popular widget tabs work -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(".popular-tab-toggle").click( function(e) {
+			e.preventDefault();
+			$('.popular-tab-toggle h2').toggleClass('active');
+			$('.popular ul').toggleClass('active');
+		});
+		$(".headline-hover").mouseover( function() {
+			if( $("#slide-" + $(this).attr('ID')).attr('style') === "display: none; " ) {
+				$(".slides img").hide();
+				$(".headline").removeClass('active');
+				$(this).parent().addClass('active');
+				$("#slide-" + $(this).attr('ID')).fadeIn('slow');
+			}	
+		});
+	});
+	</script>
+
+	<?php wp_head(); ?>
+</head>
+
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="page">
+
+	<div class="l-topad l-contained advertisement">
+		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar( 'Header Sidebar')) : ?>
+		<?php endif; ?>
+	</div><!-- .l-topad -->
+	<div class="l-topad-mobile l-contained advertisement">
+		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar( 'Mobile Header Sidebar')) : ?>
+		<?php endif; ?>
+	</div><!-- .l-topad -->
+
+	<header class="l-masthead">
+		<div class="l-contained clearfix">
+			<div class="l-leftheader hide-tablet">
+				<div class="date-update">
+					<span class="date"><?php $my_date = date('Y-m-d H:i:s'); echo mysql2date('l, j. F, Y', $my_date); ?></span><br />
+					<span class="updated">Last updated: <span class="update-time">
+						<?php 	// Grab the time since the last post was added/updated
+								$the_query = new WP_Query( array( 'posts_per_page' => '1', 'post_type' => array( 'news', 'culture', 'opinion', 'features', 'sports', 'video', 'photo') ) );
+								while ( $the_query->have_posts() ) : $the_query->the_post();
+									echo get_time_since_posted();
+								endwhile;
+								// Reset Post Data
+								wp_reset_postdata();
+						?>
+					</span></span>
+				</div>
+				<div class="social-icons">
+					<span><a href="https://www.facebook.com/ubyssey/"><span class="fs1 facebook" aria-hidden="true" data-icon="&#x22;"></span></a><a href="http://twitter.com/Ubyssey"><span class="fs1 twitter" aria-hidden="true" data-icon="&#x21;"></span></a><a href="<?php bloginfo('rss2_url'); ?>"><span class="fs1" aria-hidden="true" data-icon="&#x27;"></span></a></span>
+				</div>
+			</div><!-- .l-leftheader -->
+			<div class="l-rightheader clearfix">
+				<nav class="second-nav hide-mobile">
+					<ul>
+						<li><a href="/advertise-with-us/">Advertise</a></li>
+						<li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+						<li><a href="/about/">About</a></li>
+						<li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+						<li><a href="/contact/">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="search-form clearfix">
+					<?php get_search_form(); ?>
+				</div>
+			</div><!-- .l-rightheader -->
+			<div class="l-centerheader">
+				<h1 class="branding">
+					<a href="/"><span class="dingbat">U</span><span class="minion">THE UBYSSEY</span></a>
+				</h1>
+			</div>
+		</div><!-- .l-contained -->
+	</header><!-- .l-masthead -->
+
+	<nav class="l-primarynav">
+		<div class="l-contained">
+			<ul class="hide-mobile">
+				<li><a href="/news/">News</a></li>
+				<li><a href="/culture/">Culture</a></li>
+				<li><a href="/opinion/">Opinion</a></li>
+				<li><a href="/features/">Features</a></li>
+				<li><a href="/sports/">Sports</a></li>
+				<li><a href="/videos/">Video</a></li>
+				<li><a href="/photos/">Photos</a></li>
+				<li><a href="/vilestblog">Blog</a></li>
+			</ul>
+			<select class="show-mobile" >
+				<option value="/" selected>Sections</option>
+				<option value="/news/">News</option>
+				<option value="/culture/">Culture</option>
+				<option value="/opinion/">Opinion</option>
+				<option value="/features/">Features</option>
+				<option value="/sports/">Sports</option>
+				<option value="/videos/">Video</option>
+				<option value="/photos/">Photos</option>
+				<option value="/vilestblog/">Blog</option>
+			</select>
+		</div><!-- .l-contained -->
+	</nav><!-- .l-primarynav -->
+
+	<?php /* @TODO: Make plugin that shows breaking stories */ ?>
+	<?php /* if( is_single() ) : 
+		<div class="recent-feed hide-mobile hide-tablet">
+			<div class="l-contained">
+				<p><span class="lead">Breaking news:</span> <a href="#">New UBC rugby facility to be ready to use in fall 2012</a> <span class="time hide-tablet">5 minutes ago &nbsp;  < &nbsp; ></span></p>
+			</div>
+		</div><!-- .recent-feed -->
+	 endif; */ ?>
+
+	<div class="l-content l-contained clearfix">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php /*
+
+<div id="page">
+	
+	<header class="l-branding branding clearfix" role="banner">
+		<a href="<?php bloginfo('url'); ?>"><h1 class="l-logo">FMG - Fountain Media Group</h1></a>
+		<div class="l-headright">
+			<div class="l-socialicons clearfix">
+				<a href="#"><div class="twitter"></div></a>
+				<a href="#"><div class="facebook"></div></a>				
+			</div><!-- socialicons -->
+			<nav class="l-primarynav primarynav">
+				<ul>
+					<li><a href="<?php bloginfo('url'); ?>/contact/" class="<?php if ( is_page( 'contact' ) ) echo 'current'; ?>">contact</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/case-studies/" class="<?php if ( is_page( 'case-studies' ) ) echo 'current'; ?>">case studies</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/fmg-team/" class="<?php if ( is_page( 'fmg-team' ) ) echo 'current'; ?>">fmg team</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/news/" class="<?php if ( is_page( 'news' ) ) echo 'current'; ?>">news</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/equipment/" class="<?php if ( is_page( 'equipment' ) ) echo 'current'; ?>">equipment</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/services/"class="<?php if ( is_page( 'services' ) ) echo 'current'; ?>">services</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/about/" class="<?php if ( is_page( 'about' ) ) echo 'current'; ?>">about</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/" class="<?php if ( is_front_page() ) echo 'current'; ?>">home</a></li>
+				</ul>
+			</nav><!-- .l-primarynav -->
+		</div><!-- .l-headright -->
+	</header><!-- .l-branding -->
+
+	<div id="main" class="l-main">
+
+	*/ ?>

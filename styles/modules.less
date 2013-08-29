@@ -1,0 +1,1615 @@
+/* ==========================================================================
+   Modules.less
+   ========================================================================== */
+
+/*
+ * Used for styling of modules. Should be independent of layouts.
+ */
+
+/* === | HEADER | =========================================================== */
+
+/* Header -- Branding */
+h1.branding {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  height: 70px;
+  line-height: 70px;
+
+  @media only screen and (min-width: 850px) {
+    line-height: 120px;
+    height: 140px;
+  }
+}
+h1 a {
+	text-decoration: none;
+}
+h1 a span.dingbat {
+	color: @UB_Blue;
+	font-family: AgincourtRegular, serif;
+	font-size: 83px;
+  height: 70px;
+  line-height: 70px;
+  vertical-align: middle;
+
+  @media only screen and (min-width: 500px) { font-size: 100px; }
+  @media only screen and (min-width: 850px) { font-size: 114px; }
+}
+h1 a span.minion {
+	color: @Off_Black;
+	font-family: MinionProBold, serif;
+	font-size: 40px;
+  letter-spacing: -0.05em;
+  height: 70px;
+  line-height: 70px;
+  vertical-align: -6%;
+  padding-left: 3px;
+
+  @media only screen and (min-width: 500px) {
+    font-size: 53px;
+    vertical-align: -14%;
+    padding-left: 3px;
+  }
+
+  @media only screen and (min-width: 850px) {
+    font-size: 57px;
+    vertical-align: -16%;
+    padding-left: 3px;
+  }
+}
+
+/* Header -- Search box */
+.search-form { display: inline-block; }
+.search-form input {
+  float: left;
+  height: 25px;
+}
+.search-form input[type="text"] {
+  width: 220px;
+  height: 23px;
+  border: 1px solid #ccc;
+  padding: 0;
+  margin: 0;
+
+  @media only screen and (min-width: 500px) { width: 160px; }
+}
+.search-form {
+  @media only screen and (min-width: 500px) { margin-top: 6px; }
+  padding: 16px 0 10px 0;
+  background: #efefef;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  text-align: center;
+
+  @media only screen and (min-width: 500px) {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border-bottom: none;
+    border-top: none;
+    text-align: left;
+    float: right;
+    width: auto;
+  }
+}
+.search-form form { 
+  display: inline-block;
+  
+  @media only screen and (min-width: 500px) { display: block; }
+  
+  @media only screen and (min-width: 850px) {
+    position: relative;
+    top: 78px;
+  }
+}
+
+/* Header -- Secondary Nav */
+nav.second-nav li,
+nav.second-nav li a {
+  @media only screen and (min-width: 500px) {
+    float: right;
+    display: block;
+    text-decoration: none;
+    color: #666;
+    font-family: Helvetica, serif;
+    letter-spacing: -0.05em;
+    font-size: 15px;
+  }
+
+  @media only screen and (min-width: 850px) { font-size: 13px; }
+
+}
+nav.second-nav li a:hover {
+  color: @UB_Blue;
+}
+.second-nav {
+  @media only screen and (min-width: 500px) {
+    float: left; 
+    vertical-align: bottom;
+    margin-top: 10px;
+  }
+
+  @media only screen and (min-width: 850px) { float: right; }
+}
+
+/* Header -- Last updated */
+.date-update {
+  @media only screen and (min-width: 850px) {
+    font-family: helvetica, serif;
+    font-size: 11px;
+    color: #999;
+    letter-spacing: -0.06em;
+    text-align: left;
+    margin-top: 9px;
+  } 
+}
+.date-update .date {
+  @media only screen and (min-width: 850px) { text-transform: uppercase; }
+}
+.date-update .update-time {
+  @media only screen and (min-width: 850px) { color: #666; }
+}
+
+/* Header -- Social Media icons */
+.social-icons {
+  @media only screen and (min-width: 850px) {
+    text-align: left;
+    position: relative;
+    top: 61px;
+  }
+}
+.social-icons span {
+  @media only screen and (min-width: 850px) {
+    color: @UB_Blue;
+    font-family: ModernPictogramsNormal;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }  
+}
+.social-icons span .rss {
+  @media only screen and (min-width: 850px) { font-size: 33px; }
+}
+.social-icons a span {
+  color: @UB_DarkBlue;
+  &:hover { color: @UB_Blue; }
+}
+.social-icons a {
+  text-decoration: none;
+}
+.social-icons .twitter {
+  padding-right: 6px;
+}
+.social-icons .facebook {
+  padding-right: 1px;
+}
+
+/* === | PRIMARY NAVIGATION | =============================================== */
+
+/* Show the select box navigation for the mobile layout */
+select.show-mobile {
+  width: 250px;
+  display: inline-block;
+}
+nav.l-primarynav {
+  background: #efefef;
+  border-bottom: 1px solid #ccc;
+  padding: 12px 0 12px 0;
+  text-align: center;
+}
+/* Use box sizing for percentage based responsive borders */
+.l-primarynav, .l-primarynav ul, .l-primarynav ul li, .l-primarynav ul li a {
+  @media only screen and (min-width: 500px) {
+    .box-size-border-box;
+  }
+}
+nav.l-primarynav {
+  @media only screen and (min-width: 500px) {
+    background: #F3F4F4;
+    border-top: 3px solid #3F3F3F;
+    border-bottom: 2px solid #3F3F3F;
+    padding: 0;
+  }
+}
+nav ul {
+  @media only screen and (min-width: 500px) {
+    list-style: none;
+    overflow: hidden;
+  }
+}
+nav.l-primarynav li a {
+  @media only screen and (min-width: 500px) {
+    color: #3F3F3F;
+    font-weight: bold;
+    border-left: 2px solid #FDFDFD;
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 25%;
+    padding: 12px;
+    letter-spacing: -.07em;
+    font-size: 15px;
+  }
+
+  @media only screen and (min-width: 850px) {
+    width: 12.5%;
+    padding: 8px;
+    // Hover CSS easing
+    -webkit-transition-property: background;
+    -moz-transition-property: background;
+    -o-transition-property: background;
+    -ms-transition-property: background;
+    transition-property: background;
+
+    -webkit-transition-duration: .1s;
+    -moz-transition-duration: .1s;
+    -o-transition-duration: .1s;
+    -ms-transition-duration: .1s;
+    transition-duration: .1s;
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    -ms-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+}
+
+nav.l-primarynav li a.active {
+  background: darken(#F3F4F4, 8%);
+}
+nav.l-primarynav li a:hover {
+  background: darken(#F3F4F4, 8%);
+  @media only screen and (min-width: 850px) {
+    // Hover CSS easing
+    -webkit-transition-property: background;
+    -moz-transition-property: background;
+    -o-transition-property: background;
+    -ms-transition-property: background;
+    transition-property: background;
+
+    -webkit-transition-duration: .1s;
+    -moz-transition-duration: .1s;
+    -o-transition-duration: .1s;
+    -ms-transition-duration: .1s;
+    transition-duration: .1s;
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    -ms-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+}
+
+/* Add borders */
+nav.l-primarynav li:nth-child(4) a,
+nav.l-primarynav li:last-child a {
+  @media only screen and (min-width: 500px) {
+    border-right: 2px solid #FDFDFD;
+  }
+}
+/* Remove border on large screen */
+nav.l-primarynav li:nth-child(4) a {
+  @media only screen and (min-width: 850px) { border-right: none; }
+}
+nav.l-primarynav li:nth-child(1) a,
+nav.l-primarynav li:nth-child(2) a,
+nav.l-primarynav li:nth-child(3) a,
+nav.l-primarynav li:nth-child(4) a {
+  /* Add bottom borders for tablet layout */
+  @media only screen and (min-width: 500px) {
+    border-bottom: 2px solid #FDFDFD;
+  }
+  /* Remove bottom borders for desktop layout */
+  @media only screen and (min-width: 850px) { border-bottom: none; }
+}
+
+
+/* === | FEATURE BOX | ========================================================= */
+.feature-box {
+
+  @media only screen and (min-width: 500px) { margin-bottom: 20px; }
+
+  header { 
+    border-bottom: 1px solid @Border_Gray;
+    background: @Light_Gray;
+    @media only screen and (min-width: 500px) { 
+      border-top: 1px solid @UB_DarkBlue;
+      margin-bottom: 10px;
+    }
+  }
+  h2 {
+    font-size: 22px;
+    line-height: 48px;
+    margin: 0;
+    padding-left: 12px;
+    text-transform: uppercase;
+    a { text-decoration: none; }
+    a:hover { color: @UB_DarkBlue; }
+
+    @media only screen and (min-width: 500px) {
+      float: left;
+      display: inline;
+    }
+  }
+  .tags {
+    float: right;
+    li {
+      display: inline;
+      font-size: 11px;
+      text-transform: uppercase;
+      line-height: 44px;
+      border-right: 1px solid @Light_Body;
+      margin-right: 3px;
+      padding-right: 6px;
+      a {
+        color: @Light_Body;
+        text-decoration: none;
+      }
+      a:hover { color: @UB_Blue; }
+    }
+    li:last-child { border: none; }
+  }
+
+  .featured {
+
+    @media only screen and (min-width: 500px) {
+      float: left;
+      width: 42.0420420%;
+      .box-size-border-box; // Use box-size: border-box
+      padding-right: 13px;
+      border-right: 1px dotted @UB_DarkBlue;
+    }
+
+    p {
+      padding: 0 10px 0 12px;
+      font-weight: bold;
+      margin: 8px 0 8px 0;
+      @media only screen and (min-width: 500px) { padding: 0; }
+    }
+    
+    a { text-decoration: none; }
+  }
+
+  .section-feed {
+
+    @media only screen and (min-width: 500px) {
+      float: right;
+      width: 57.957958%;
+      .box-size-border-box; // Use box-size: border-box
+      padding-left: 13px;
+    }
+
+    li {
+      border-top: 1px solid @Border_Gray;
+      padding: 8px 10px 8px 12px;
+      font-size: 15px;
+
+      @media only screen and (min-width: 500px) { padding: 8px 9px 8px 0; }
+
+      a {
+        color: @Body_Color;
+        text-decoration: none;
+      }
+      a:hover { color: @UB_Blue;}
+    }
+    li:last-child {
+      border-bottom: 1px solid @Border_Gray;
+      @media only screen and (min-width: 500px) { border-bottom: none; }
+    }
+    li:first-child {
+      @media only screen and (min-width: 500px) { 
+        border-top: none;
+        padding-top: 5px;
+      }
+    }
+  }
+
+
+} // end .feature-box
+
+
+/* === | WIDGET BASE STYLES | ======================================================= */
+.l-secondary {
+  h3 {
+    color: @UB_DarkBlue;
+    line-height: 1;
+    margin: 0;
+    padding: 0 10px 0 10px;
+    background: #fff;
+    display: inline-block;
+    font-size: 20px;
+    text-transform: uppercase;
+    span { font-size: 50px; }
+  }
+  .w-icon { 
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+  .over-title {
+    margin: -23px 0 12px 0;
+    text-align: center;
+  }
+  .full-title-widget {
+    padding: 0;
+    border: 1px solid @Border_Gray;
+
+  }
+  .full-title {
+    text-align: center;
+    background: @UB_DarkBlue;
+  }
+  a { text-decoration: none; }
+
+  >div.over-title-widget { border: 1px solid @Border_Gray; border-top: 4px solid @Border_Gray; }
+  >div.regular-title-widget { border: 1px solid @Border_Gray; }
+
+  
+
+}
+
+/* === | POPULAR WIDGET | =========================================================== */
+
+.l-secondary .popular {
+
+  border-left: 1px solid @Border_Gray;
+  border-right: 1px solid @Border_Gray;
+  border-top: none;
+  border-bottom: none;
+
+  header {
+    background: #f3f4f4;
+    border-top: 1px solid @Border_Gray;
+    border-bottom: 1px solid @Border_Gray;
+  }
+
+  a {
+    text-decoration: none;
+    //color: #efefef;
+    &:hover { color: @UB_Blue; }
+  }
+  h2 {
+    display: inline;
+    float: left;
+    width: 50%;
+    text-align: center;
+    .box-size-border-box;
+    margin: 0;
+    padding: 4px 0 0 0;
+    line-height: 32px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #666;
+    
+    // Fix font size for 850-100px views
+    // @media only screen and (min-width: 500px) { font-size: 17px; }
+    // @media only screen and (min-width: 850px) { font-size: 17px; }
+    // @media only screen and (min-width: 1000px) { font-size: 17px; }
+  }
+  h2.first { 
+    border-right: 2px solid #fff;
+  }
+  h2.active { //border-bottom: 4px solid @Border_Gray; padding-top: 0;
+    color: @UB_DarkBlue; }
+  h2:hover { //border-bottom: 4px solid @Border_Gray; padding-top: 0;
+    color: @UB_DarkBlue; }
+
+  ul { 
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.active { display: block; }
+
+  li {
+    padding: 8px 12px 8px 10px; 
+    border-bottom: 1px solid @Border_Gray;
+    a { text-decoration: none; font-size: 15px;}
+
+    @media only screen and (min-width: 500px) { padding: 8px 20px 8px 20px; } 
+  }
+
+} // end .popular
+
+.l-secondary .popular { padding: 0; } //remove default padding from layout.css
+
+
+/* === | BOX AD WIDGET | ============================================================== */
+
+.l-secondary .pro_ad_system_ad_container {
+  padding: 15px 0;
+  font-size: 11px;
+  text-align: center;
+  border: 1px solid @Border_Gray;
+
+  // Overwrite inline styles that cant be easily changed otherwise
+  width: auto !important;
+  height: auto !important;
+  background: none !important;
+  
+  .pro_ad_zone {
+    margin: 0 auto;
+    width: 300px;
+  }
+}
+
+
+/* === | EDITORS PICK WIDGET | ========================================================= */
+.editors-pick {
+  h3 {
+    background: none;
+    padding: 6px 0;
+    a { color: @Light_Gray; }
+  }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li {
+    border-top: 1px solid @Border_Gray;
+    padding: 6px 12px 6px 12px;
+    font-size: 15px;
+
+    @media only screen and (min-width: 500px) { 
+      padding: 6px 20px 6px 20px;
+    }
+
+  }
+}
+
+/* === | RECENT VIDEO WIDGET | ========================================================= */
+
+.video-widget {
+
+  padding: 15px 20px 15px 20px;
+  margin-top: 43px; // Offset negative margin on .over-title
+
+  .over-title { margin-top: -43px; margin-bottom: 5px; }
+
+  p {
+    font-size: 14px;
+    padding: 7px 0 0 0;
+    margin: 0;
+  }
+
+} // end .video
+
+
+/* === | TWEET FEED WIDGET | =========================================================== */
+
+.tweet-feed {
+  
+  padding: 15px 20px 15px 20px;
+  margin-top: 43px; // Offset negative margin on .over-title
+
+  .over-title { margin-top: -43px; }
+
+  p { 
+    font-family: georgia, serif, sans-serif;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0 0 25px 0;
+    padding: 0 !important;
+  }
+  .meta {
+    text-align: center;
+    font-size: 11px;
+    margin-top: 23px;
+  }
+  h3 { font-weight: normal; }
+
+
+} // end .tweet-feed
+
+
+/* === | FACEBOOK LIKE BOX WIDGET | ==================================================== */
+.facebook {
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* === | Latest Print Issue WIDGET | =================================================== */
+.pdf-img {
+  margin: 10px 0;
+}
+.pdf-wrap {
+  width: 300px;
+  margin: 0 auto;
+}
+.pdf-read-more {
+  display: block;
+  width: 300px;
+  margin: 0 auto 10px auto;
+}
+.print-issue a {
+  font-weight: bold;
+}
+
+/* === | RECENT FEED | ================================================================= */
+.recent-feed {
+  border-bottom: 1px solid @Off_Black;
+  background: #fdfdfd;
+  p { 
+    margin: 0;
+    padding: 5px 0 3px 0;
+    font-size: 12px;
+  }
+  a { text-decoration: none; }
+  .lead {
+    font-weight: bold;
+    padding-right: 10px;
+    font-size: 11px;
+  }
+  .time { float: right;}
+}
+
+/* === | SINGLE/ARTICLE | ============================================================== */
+h1 {
+  font-family: georgia, times, serif;
+  line-height: 1.5;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  @media only screen and (min-width: 500px) {
+    font-size: 30px;
+    padding-left: 0; 
+  }
+}
+
+.single p {
+  font-size: 1.125em;
+  font-family: georgia, times, serif;
+  line-height: 1.5;
+  margin: 0 0 25px 0; /* 1.6 * 16 */
+  padding: 0 12px 0 10px;
+  @media only screen and (min-width: 500px) {
+    padding: 0 50px 0 12px;
+  }
+  @media only screen and (min-width: 850px) { font-size: 1.0625em; }
+}
+.article-body p:first-child {
+  @media only screen and (min-width: 500px) { font-size: 19px; }
+}
+
+/* Image caption */
+.single .wp-caption-text {
+  margin: 0;
+  background: #fcfcfc;
+  border-bottom: 1px dotted @Border_Gray;
+  margin-bottom: 15px;
+  @media only screen and (min-width: 500px) { margin-bottom: 25px; }
+
+    font-size: 12px;
+    color: #888;
+    padding: 15px 0 15px 10px;
+    @media only screen and (min-width: 500px) { padding-right: 12px; }
+
+}
+
+/* Post meta */
+.post-meta {
+  font-family: georgia, times, serif;
+  color: #555;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 5px 0 12px 10px;
+  @media only screen and (min-width: 500px) { padding-left: 12px; margin: 8px 0; }
+  border-top: 1px dotted @Border_Gray;
+  .date { 
+    float: right; 
+    font-size: 14px;
+    padding-right: 12px;
+  }
+  a { text-decoration: none; }
+}
+
+/* top-share box */
+.top-share {
+  margin: 0 0 25px 0;
+  @media only screen and (min-width: 850px) {
+    float: right;
+    margin: 7px 0 24px 25px;
+  }
+  ul {
+    padding: 0 12px 15px 10px;
+    margin: 0; 
+    list-style: none; 
+    border-bottom: 1px dotted @Border_Gray;
+    @media only screen and (min-width: 850px) {
+      padding: 0;
+      border-top: 1px solid @Border_Gray;
+      border-bottom: 1px solid @Border_Gray;
+    }
+
+  }
+  li { 
+    @media only screen and (min-width: 850px) {
+      border-bottom: 1px dotted @Border_Gray;
+      //display: inline;
+      margin: 5px 0;
+      width: 130px;
+      text-align: left;
+      a { text-decoration: none; &:hover { color: @UB_Blue; } }
+    }
+    
+  }
+  .facebook-like { 
+    float: left;
+    display: inline;
+    @media only screen and (min-width: 850px) {
+      display: block;
+      float: none;
+      padding: 4px 0 7px 0;
+    }
+  }
+  .tweet { float: right;
+    display: inline;
+    @media only screen and (min-width: 500px) { 
+      float: left;
+      margin-left : 45px;
+    }
+    @media only screen and (min-width: 850px) {
+      display: block;
+      float: none;
+      margin-left: 0;
+      padding: 4px 0 3px 0; 
+    }
+  }
+  .reddit {
+    @media only screen and (min-width: 500px) {
+      display: inline; 
+      float: left;
+      margin-left: 15px;
+    }
+    @media only screen and (min-width: 850px) {
+      display: block;
+      float: none;
+      margin-left: 0;
+      padding-top: 4px;
+    }
+  }
+  li:last-child {
+    border: none;
+  }
+
+} // end .top-share
+
+/* Bottom share box */
+.bottom-share {
+  padding: 20px 0 20px 10px;
+  margin: 40px 0 30px 0;
+  border-top: 1px dotted @Border_Gray;
+  border-bottom: 1px dotted @Border_Gray;
+  .button { display: inline-block; }
+  .twitter, .reddit { margin-left: 10%; }
+  .fb-like { bottom: 4px; }
+  // .twitter { margin-top: 3px; }
+  @media only screen and (min-width: 500px) {
+    padding: 20px 0;
+  }
+
+} // end .bottom-share
+
+/* Small Feed */
+.small-feed {
+  border-top: 1px solid @Border_Gray;
+  border-bottom: 1px solid @Border_Gray;
+  padding-bottom: 25px;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li { 
+    margin-bottom: 20px;
+    border-bottom: 1px solid @Border_Gray;
+    padding-bottom: 20px;
+    @media only screen and (min-width: 500px) { 
+      margin-bottom: 35px;
+      padding-bottom: 0;
+      border: none;
+    }
+  }
+  h3 {
+    font-size: 19px;
+    // text-transform: uppercase;
+    font-family: sans-serif;
+    margin: 25px 0 30px 0;
+    padding: 0 12px 0 10px;
+    @media only screen and (min-width: 500px) { padding: 0; font-size: 22px; }
+  }
+  .img-wrap { 
+    width: 20%;
+    float: left;
+  }
+  article {
+    padding: 0 12px 0 10px;
+    @media only screen and (min-width: 500px) {
+      padding: 0;
+      float: left; 
+      width: 76%; 
+      margin-left: 4%; 
+    }
+  }
+  p , h4 {
+    font-family: sans-serif;
+    padding-right: 8px;
+    a { text-decoration: none; }
+  }
+  a p {
+    color: @Body_Color;
+    &:hover { color: @UB_Blue; }
+  }
+  a { text-decoration: none; }
+  p {
+    font-family: sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0 8px 0 0;
+    a { color: @Body_Color; }
+    @media only screen and (min-width: 500px) { font-size: 14px; }
+  }
+  h4 { 
+    font-size: 17px;
+    margin: 0 0 8px 0;
+    @media only screen and (min-width: 500px) { font-size: 18px; margin: 0; }
+  }
+  .meta {
+    margin: 6px 0;
+    padding: 2px 0;
+    font-size: 12px;
+    border-top: 1px dotted @Border_Gray;
+    border-bottom: 1px dotted @Border_Gray;
+    a { text-decoration: none; }
+  }
+
+  .recent-feed { // Added styles for section fronts
+    border: none;
+    .img-wrap { width: 25%; }
+    article { @media only screen and (min-width: 500px) { width: 71%; } }
+    li { 
+      padding-bottom: 35px;
+      border-bottom: 1px dotted @Border_Gray;
+      padding-top: 25px;
+      margin: 0;
+      &:nth-child(2n) { background: #fafafa; }
+    }
+    p { font-family: georgia, sans-serif; padding-right: 10px;}
+    .meta { margin: 4px 0 8px 0; }
+    h2 {
+      font-size: 22px;
+      line-height: 48px;
+      text-transform: uppercase;
+      color: @UB_DarkBlue;
+      margin: 0;
+      padding: 0 0 0 8px;
+      background: #efefef;
+      border-top: 1px solid @UB_DarkBlue;
+    }
+  }
+  .bottom-nav {
+    margin-top: 25px;
+    .nav-previous { float: left; }
+    .nav-next { float: right; }
+  }
+  header.recent-feed { border: none; }
+  div.recent-feed { border: none; }
+
+} // end .related
+
+
+/* Comments - Disqus */
+#disqus_thread {
+  padding: 0 10px 0 12px;
+  margin-top: 50px;
+  @media only screen and (min-width: 500px) { padding: 0; }
+}
+
+
+/* === | SINGLE VIDEO | ================================================================ */
+.main-video {
+  border-bottom: 1px dotted @Border_Gray;
+  padding-bottom: 30px;
+  @media only screen and (min-width: 850px) { padding-bottom: 15px; }
+  h1 {
+    @media only screen and (min-width: 850px) { 
+      border-bottom: 1px dotted @Border_Gray;
+      padding-bottom: 10px;
+      margin: 10px 0 20px 0;
+    }
+  }
+}
+.recent-video {
+  h2 {
+    font-size: 20px;
+    margin: 15px 0;
+    border-top: 1px dotted @Border_Gray;
+    padding: 15px 10px 0 12px;
+    @media only screen and (min-width: 850px) { 
+      border-top: none;
+      margin: 15px 0 0 10px;
+      padding: 10px 10px 10px 30px;
+      background: #f3f3f4;
+      border: 1px solid @Border_Gray;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @media only screen and (min-width: 850px) { 
+      border-left: 1px solid @Border_Gray;
+      border-right: 1px solid @Border_Gray;
+      border-bottom: 1px solid @Border_Gray;
+      padding: 0 30px 0 30px;
+      margin-left: 10px;
+    }
+  }
+  li {
+    padding: 0;
+    margin: 0 0 25px 0;
+    border-top: 1px dotted @Border_Gray;
+  }
+  h3 {
+    margin: 11px 0 8px 0;
+    text-transform: none;
+    line-height: 1.3;
+    font-size: 18px;
+    @media only screen and (min-width: 500px) { margin: 15px 0 12px 0; padding: 0; }
+  }
+}
+.vid-wrap {
+  // margin: 0 80px;
+}
+.post-content {
+  border-bottom: 1px dotted @Border_Gray;
+  padding: 0 10px 10px 12px;
+  margin-top: 12px;
+}
+
+
+
+/* === | SECTION FRONT | =============================================================== */
+.section-featured,
+.section-editorspick,
+.recent {
+  @media only screen and (min-width: 500px) { margin-bottom: 20px; }
+  header { 
+    border-bottom: 1px solid @Border_Gray;
+    background: @Light_Gray;
+    border-top: 1px solid @Border_Gray;
+    @media only screen and (min-width: 500px) { 
+      border-top: 1px solid @UB_DarkBlue;
+      margin-bottom: 8px;
+    }
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 48px;
+    margin: 0;
+    text-transform: uppercase;
+    color: @UB_DarkBlue;
+  }
+  h2, h3, h4, p, .meta {
+    padding: 0 12px 0 10px;
+  }
+  h3 { 
+    margin: 8px 0 6px 0;
+    font-size: 17px;
+  }
+  h4 {
+    margin: 0;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 25px;
+    a { 
+      text-decoration: none;
+      color: @UB_DarkBlue;
+      &:hover { color: @UB_Blue; }
+    }
+  }
+  p { 
+    font-size: 14px;
+    margin: 5px 0 15px 0;
+    font-family: georgia, "times new roman", times, sans-serif;
+  }
+  a { text-decoration: none; }
+  .story {
+    @media only screen and (min-width: 500px) {
+      .box-size-border-box;
+      width: 48.5%;
+      float: left;
+      border-top: 1px dotted @UB_DarkBlue;
+      // padding-top: 10px;
+    }
+  }
+  .story:first-child { @media only screen and (min-width: 500px) { margin-right: 3%; } }
+  img { @media only screen and (min-width: 500px) {  padding-top: 8px; } }
+
+  .meta {
+    font-size: 11px;
+    border-top: 1px dotted @Border_Gray;
+    border-bottom: 1px dotted @Border_Gray;
+    margin-bottom: 6px;
+    line-height: 23px;
+    padding-right: 0;
+  }
+
+  // Show and hide 'comments' text when it doesnt fit
+  .comments-text {
+    @media only screen and (min-width: 500px) { display: none; }
+    @media only screen and (min-width: 638px) { display: inline; }
+    @media only screen and (min-width: 850px) { display: none; }
+    @media only screen and (min-width: 1023px) { display: inline; }
+  }
+
+}
+.section-featured header { 
+  border-top: none;
+  @media only screen and (min-width: 500px) { border-top: 1px solid @UB_DarkBlue; }
+}
+.section-featured { 
+  border-bottom: 1px solid @Border_Gray;
+  @media only screen and (min-width: 500px) { border-bottom: none; }
+}
+
+.recent {
+
+}
+
+
+/* === | VIDEO PAGE | ================================================================== */
+.video-subhead {
+  @media only screen and (min-width: 500px) {  margin-top: 20px; }
+  .featured-video {
+    width: 100%;
+    @media only screen and (min-width: 500px) {
+      float: left;
+      width: 49%;
+    }
+  }
+  .weekly-show {
+    width: 100%;
+    @media only screen and (min-width: 500px) {
+      float: right;
+      width: 49%;
+    }
+  }
+  h2 {
+    color: @UB_DarkBlue;
+    // text-transform: uppercase;
+    font-size: 17px;
+    line-height: 45px;
+    margin: 0 0 15px 0;
+    padding: 5px 0 0 20px;
+    background: #EFEFEF;
+    border: 1px solid @Border_Gray;
+    border-top: none;
+  }
+}
+.video-nav {
+  margin-bottom: 10px;
+  @media only screen and (min-width: 500px) {
+    border-left: 1px solid @Border_Gray;
+    border-right: 1px solid @Border_Gray;
+  }
+  h4 {
+    background: #EFEFEF;
+    font-size: 19px;
+    margin: 0;
+    line-height: 35px;
+    padding-left: 10px;
+    border-top: 1px solid @Border_Gray;
+    border-bottom: 1px solid @Border_Gray;
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    text-align: center;
+    font-size: 17px;
+    border-bottom: 1px solid @Border_Gray;
+    padding: 5px 0;
+    @media only screen and (min-width: 500px) {
+      .box-size-border-box;
+      float: left;
+      width: 50%;
+      &:nth-child(2n) { border-left: 1px solid @Border_Gray; }
+      &:nth-child(7) { width: 100%; }
+    }
+  }
+  a:hover { color: @UB_Blue; }
+}
+
+.tax-video_category h2.segment { text-transform: none; }
+.featured-video-tax { margin-bottom: 10px; }
+
+
+
+/* === | PAGE | ======================================================================== */
+a { text-decoration: none; }
+.search-form-page {
+  float: none;
+  input[type="text"] { width: 260px; }
+  form { position: static; }
+}
+
+#advice-submit {
+  padding: 10px;
+}
+
+/* === | FEATURED SLIDER | ============================================================= */
+.featured-slider {
+  position: relative;
+  height: 100%;
+  margin-bottom: 10px;
+  .slide { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .headlines {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    //background: @UB_DarkBlue;
+    overflow: hidden;
+    .headline {
+      border-right: 1px solid white;
+      background: @UB_DarkBlue;
+      opacity: .9;
+      a { color: #fff; }
+      h3 {
+        margin: 0;
+        padding: 6px 10px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.15;
+      }
+    }
+    .floatLeft {float:left;}
+    .child-left, .child-right {width:33.333%}
+    .child-right {
+      float: right;
+      height: 100%;
+      position: absolute;
+      right: 0;
+    }
+    .child-center {
+      float: right;
+      height: 100%;
+      position: absolute;
+      right: 33.3%;
+      width: 33%;
+    }
+    .headline:last-child {
+      border: none;
+    }
+    .active {
+      background: #0071C9;
+    }
+  }
+
+} // .featured-slider
+
+/* === | ELECTIONS | =================================================================== */
+#ams-elections-featured {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid @Border_Gray;
+  background: #fafafa;
+  .img-wrap {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  article {
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    // padding-left: 20px;
+  }
+}
+#ams-elections-box {
+  header {
+    background: #840000;
+    border-color: @Border_Gray;
+  }
+  h2 a {
+    color: #fff;
+    font-family: MinionProBold, sans-serif;
+    font-size: 24px;
+  }
+  .featured {
+    border-color: #840000;
+  }
+}
+.l-secondary .ams-elections {
+  margin-top: 20px;
+  .full-title {
+    background: #840000;
+    h3 {
+      font-family: MinionProBold, sans-serif;
+    }
+  }
+}
+.l-secondary .ams-elections.ams-elections-candidates {
+  .position-header {
+    background: #f3f4f4;
+    h4 { margin: 3px 0; }
+  }
+}
+h1 a span.ams-elections-header.minion {
+  // color: @UB_DarkBlue;
+  color: #840000;
+  font-size: 52px;
+} 
+h1 a span.ams-elections-header.dingbat {
+  color: #840000;
+}
+#ams-related-articles {
+  h3 {
+    background: #840000;
+    color: #fff;
+    font-family: MinionProBold, sans-serif;
+    font-size: 20px;
+    padding: 6px 0;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    border: 1px solid @Border_Gray;
+    border-bottom: none;
+  }
+  ul {
+    border: 1px solid @Border_Gray;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    border-bottom: 1px solid @Border_Gray;
+    padding: 6px 20px;
+  }
+}
+
+
+/* === | SHORTCODES | ================================================================== */
+
+/* In article quotes */
+.ub_quote {
+  position: relative;
+  width: 100%;
+  font-size: 19px;
+  background: @Light_Gray;
+  padding-bottom: 15px;
+  @media only screen and (min-width: 500px) {
+    width: 55%;
+    float: right;
+    margin: 20px 0 20px 20px;
+    padding-bottom: 25px;
+  }
+  .double-quote {
+    position: absolute;
+    top: -25px;
+    left: 5px;
+    color: @UB_Blue;
+    font-size: 130px;
+    font-family: georgia, sans-serif;
+    @media only screen and (min-width: 500px) {
+      top: -15px;
+      left: 18px;
+    }
+  }
+  p {
+    padding: 18px 10px 0 68px;
+    line-height: 1.62;
+    margin: 0;
+    @media only screen and (min-width: 500px) {
+      padding: 26px 18px 0 83px;
+    }
+  }
+  .author {
+    font-size: 16px;
+    color: #4e4e4e;
+    margin-top: 8px;
+    padding: 1px 0 0 68px;
+    @media only screen and (min-width: 500px) {
+      padding: 2px 18px 0 83px;
+    }
+  }
+}
+
+/* In article subheaders */
+.subhead {
+  font-family: Georgia, Times, sans-serif;
+  font-size: 20px;
+  margin: 40px 0 20px 0;
+  padding: 15px 12px 15px 10px;
+  background: #fcfcfc;
+  border-top: 1px dotted @Border_Gray;
+  border-bottom: 1px dotted @Border_Gray;
+  line-height: 1.55;
+  clear: both;
+}
+
+/* In article boxes */
+.ub_box {
+  position: relative;
+  width: 100%;
+  background: @Light_Gray;
+  padding: 15px 10px 15px 10px;
+  @media only screen and (min-width: 500px) {
+    width: 45%;
+    float: right;
+    margin: 20px 0 20px 20px;
+    padding-bottom: 25px;
+  }
+  font-size: 16px;
+  h3 {
+    margin: 0 0 20px 0;
+    padding: 0 0 15px 10px;
+    font-family: Georgia, Times, sans-serif;
+    font-size: 19px;
+    border-bottom: 1px dotted @Border_Gray;
+  }
+  ul { padding-left: 30px; }
+  li { margin-bottom: 5px; font-family: Georgia, Times, sans-serif; }
+  p { font-size: 16px; }
+}
+.ub_box_img {
+  width: auto;
+  display: inline-block;
+  padding: 15px;
+}
+
+
+/* === | PHOTOS SECTION| =============================================================== */
+
+.photo-gallery-feed {
+  margin-top: 8px;
+}
+.photo-gallery {
+  margin-bottom: 20px;
+  background: #EFEFEF;
+  position: relative;
+
+  .meta {
+    float: left;
+  }
+  .meta {
+    width: 240px;
+    height: 240px;
+    padding: 30px;
+  }
+
+  h2 {
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid @Border_Gray;
+    line-height: 1.1;
+    font-size: 20px;
+  }
+.fresco-img-wrap { position: relative; float: left; }
+.fresco-img-wrap .fresco-thumb-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  background: #000000; /* fallback for IE */
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 80px;
+    text-align: center;
+    line-height: 150px;
+}
+.fresco-img-wrap:hover .fresco-thumb-overlay {
+  opacity: 1;
+  -webkit-transition: opacity .1s linear;
+  -moz-transition: opacity .1s linear;
+  -o-transition: opacity .1s linear;
+  -ms-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+}
+
+// .photo-gallery .overlay {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   opacity: 0;
+//   background: #000000; /* fallback for IE */
+//   background: rgba(0, 0, 0, 0.7);
+//   color: @UB_Blue;
+//   font-size: 80px;
+// }
+// .photo-gallery:hover .overlay {
+//   opacity: 1;
+//   -webkit-transition: opacity .1s linear;
+//   -moz-transition: opacity .1s linear;
+//   -o-transition: opacity .1s linear;
+//   -ms-transition: opacity .1s linear;
+//   transition: opacity .1s linear;
+// }
+
+
+/* === | AUTHORS ARCHIVE | ============================================================= */
+.author-info {
+  margin-bottom: 40px;
+  img { float: left; margin-right: 20px; }
+  p { margin-top: 0; }
+}
+
+
+
+/* === | FOOTER | ====================================================================== */
+
+.primaryfooter {
+
+  li {
+    border-bottom: 1px solid @Border_Gray;
+    font-size: 20px;
+    text-align: center;
+    padding: 8px 0 8px 0;
+    a { color: @Body_Color; }
+    @media only screen and (min-width: 500px) {
+      border-right: 1px solid @Border_Gray;
+      border-left: 1px solid @Border_Gray;
+      padding: 10px 0;
+    }
+    @media only screen and (min-width: 850px) {
+      border: none;
+    }
+  }
+
+  ul {
+
+  }
+
+  .secondary-nav {
+    @media only screen and (min-width: 500px) {
+      float: left;
+      width: 50%;
+    }
+    @media only screen and (min-width: 850px) {
+      margin-top: 50px;
+      margin-bottom: 10px;
+      width: 100%;
+      border-top: 2px solid @Border_Gray;
+      border-bottom: 1px solid @Border_Gray;
+      li { 
+        display: inline-block;
+        width: 10.7%;
+        font-size: 17px;
+        h3 {
+          display: inline;
+          text-transform: none;
+        }
+      }
+    }
+  }
+
+  .link-farm {
+    @media only screen and (min-width: 500px) {
+      float: right;
+      width: 50%;
+    }
+    @media only screen and (min-width: 850px) {
+      float: left;
+      width: 50%;
+      margin-top: 20px;
+      li { 
+        text-align: left;
+        font-size: 13px;
+        padding: 3px 0 3px 18px;
+        border-left: 1px solid @Border_Gray;
+      }
+      li:hover { border-left: 1px solid @UB_Blue; }
+      .contact {
+        float: left
+      }
+      .other, .other2 {
+        float: left;
+        margin-left: 20%;
+      }
+    }
+    @media only screen and (min-width: 966px) {
+      .other, .other2 {
+        margin-left: 25%;
+      }
+    }
+  }
+
+  .secondary-nav li:first-child,
+  .contact li:first-child {
+    background: @Light_Gray;
+    border-top: 1px solid @Border_Gray;
+    @media only screen and (min-width: 850px) { background: none; border: none; }
+  }
+
+  h3 {
+    padding: 0;
+    margin: 0;
+    line-height: auto;
+    color: @UB_DarkBlue;
+  }
+
+  .search-form {
+    
+    border-top: none;
+    @media only screen and (min-width: 500px) {
+      margin-top: 10px;
+      clear: both;
+      display: block;
+      position: static;
+      width: 100%;
+      text-align: center;
+      form { position: static; width: 188px; }
+    }
+    @media only screen and (min-width: 850px) {
+      display: inline;
+      width: 228px;
+      position: relative;
+      left: -27.5%;
+      top: -128px;
+    }
+    form {
+      @media only screen and (min-width: 500px) { width: 278px; margin-left: 25%; }
+      @media only screen and (min-width: 600px) { margin-left: 30%; }
+      @media only screen and (min-width: 750px) { margin-left: 31%; }
+      @media only screen and (min-width: 850px) { width: 228px; }
+      input:first-child { 
+        @media only screen and (min-width: 500px) { width: 250px; }
+        @media only screen and (min-width: 850px) { width: 200px; }
+      }
+    }
+  }
+  .dingbat {
+    font-family: "AgincourtRegular";
+    color: @UB_Blue;
+    font-size: 300px;
+    line-height: 220px;
+    padding: 20px 15px 20px 0;
+    margin: 0;
+    text-align: center;
+    @media only screen and (min-width: 500px) { clear: both; }
+    @media only screen and (min-width: 850px) { 
+      display: inline;
+      margin-left: 18.4601113%; /* 199/1078 */
+      margin-top: 40px;
+      font-size: 165px;
+      line-height: 155px;
+      padding: 0;
+    }
+  }
+  .copyright {
+    color: @Light_Body;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 3px;
+    @media only screen and (min-width: 500px) { clear: both; }
+    @media only screen and (min-width: 850px) {
+      border-top: 1px solid @Border_Gray;
+      border-bottom: 1px solid @Border_Gray;
+      padding: 10px 0;
+      margin-bottom: 10px;
+      font-size: 11px;
+    }
+  }
+
+  a:hover { color: @UB_Blue; }
+
+  a { text-decoration: none; }
+
+
+} // end .primaryfooter
+

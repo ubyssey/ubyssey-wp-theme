@@ -1,0 +1,155 @@
+/* ==========================================================================
+   Layout.less
+   ========================================================================== */
+
+/*
+ * Used for site-wide layout. No styling should be included here, just width, float, position, etc.
+ */
+
+/* Top leaderboard ad */
+.l-topad {
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  // Override the inline styles from AdPress with important
+  ul { 
+    margin: 5px auto;
+    width: 728px !important;
+    display: none; // Hide for mobile
+    // Show once ad fits in screen
+    @media only screen and (min-width: 743px) { display: block; }
+  }
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+  width: 728px !important;
+
+}
+.l-topad-mobile {
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  // Override the inline styles from AdPress with important
+  ul { 
+    margin: 0 auto;
+    width: 320px !important;
+    display: block; // Hide for mobile
+    // Show once ad fits in screen
+    @media only screen and (min-width: 743px) { display: none; }
+  }
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+
+}
+
+/* General full-width container */
+.l-contained {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  // Introduce a small margin to all contained elements for bigger screens
+  @media only screen and (min-width: 500px) { width: 98%; }
+
+  // Limit width to 1078px on very large screens
+  @media only screen and (min-width: 1100px) { width: 1078px; }// 1100*.98 
+
+}
+
+/* Header */
+.l-masthead {
+  border-top: 5px solid #3F3F3F;
+}
+header .l-contained {
+  text-align: center;
+}
+.l-leftheader {
+  width: 190px;
+  float: left;
+}
+.l-rightheader {
+
+	position: relative;
+	top: 70px;	
+	// Unhide right header block for tablet & desktop
+	@media only screen and (min-width: 500px) { 
+		display: block;
+    margin: 20px 0 5px 0;
+  }
+
+  @media only screen and (min-width: 850px) { 
+  	width: 190px;
+  	float: right;
+  	margin: 0;
+  	position: static;
+  }
+
+}
+.l-centerheader {
+  width: 320px;
+  display: inline-block;
+  position: relative;
+  top: -61px;
+
+  @media only screen and (min-width: 500px) { 
+  	width: 100%;
+  	top: -45px;
+  }
+
+  @media only screen and (min-width: 850px) { 
+  	height: 140px;
+  	line-height: 140px;
+  	vertical-align: middle;
+  	position: static;
+  	width: auto;
+  }
+}
+
+/* Body Layout */
+.l-main, .l-secondary {
+  @media only screen and (min-width: 500px) { margin-top: 8px; }
+  @media only screen and (min-width: 850px) { .box-size-border-box; } // For responsive borders
+}
+
+.l-main {
+  width: 100%;
+  // height: 800px;
+  //background: #eee;
+
+  @media only screen and (min-width: 850px) { 
+    width: 61.7810761%; // 505/833
+    float: left;
+    padding-right: 1%;
+  }
+}
+
+.l-secondary {
+
+  @media only screen and (min-width: 850px) {
+    width: 38.2189239%; // 318/833
+    float: right;
+    padding-left: 1%;
+  }
+
+  .l-widget {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .l-widget:first-child {
+    margin-top: 0;
+  }
+}
+
+
+
+
+
+
