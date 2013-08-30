@@ -5,7 +5,7 @@
  */
 
 get_header(); ?>
-	
+
 	<div class="l-main">
 		<h1>Photos section coming soon!</h1>
 		<p>Check back in the next few weeks for the launch of our photos section.</p>
