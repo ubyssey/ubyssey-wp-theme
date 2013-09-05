@@ -2672,6 +2672,10 @@ img.resp,
     width: 300px;
 }
 
+.adsanity-group {
+    border: 1px solid #CCCCCC;
+}
+
 .l-featured h1 {
     text-transform: uppercase;
     font-style: oblique;
