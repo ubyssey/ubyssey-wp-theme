@@ -2672,6 +2672,11 @@ img.resp,
     width: 300px;
 }
 
+..ad-468x60 {
+    margin: 15px auto;
+    width: 468px;
+}
+
 .adsanity-group {
     border: 1px solid #CCCCCC;
 }
