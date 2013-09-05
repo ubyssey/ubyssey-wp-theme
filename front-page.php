@@ -249,7 +249,7 @@ get_header(); ?>
                 </div><!-- .content -->
             </div><!-- culture .feature-box -->
 
-            <div adsanity-group>
+            <div class="adsanity-group">
             <?php adsanity_show_ad_group(
                 array(
                     'group_ids'     => array(227), // an array of valid group ids
