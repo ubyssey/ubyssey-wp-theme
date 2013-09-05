@@ -2662,3 +2662,29 @@ img.resp,
     display: none;
   }
 }
+
+/* =========================================================
+   Featured article styles
+   ========================================================= */
+
+.ad-300x250 {
+    margin: 15px auto;
+    width: 300px;
+}
+
+.l-featured h1 {
+    text-transform: uppercase;
+    font-style: oblique;
+    font-size: 50px;
+}
+
+.l-featured p {
+    width: 61.7810761%;
+    float: left;
+    padding-right: 1%;
+}
+
+.ub_right_box {
+    width: 300px;
+    float: right;
+}

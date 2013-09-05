@@ -204,6 +204,7 @@ function get_time_since_posted() {
 
 // Removes the visual editor for everyone
 add_filter ( 'user_can_richedit' , create_function ( '$a' , 'return false;' ) , 50 );
+//add_filter( 'user_can_richedit' , '__return_false', 50 );
 
 // custom admin login logo
 function custom_login_logo() {

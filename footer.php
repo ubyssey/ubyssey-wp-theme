@@ -2,10 +2,8 @@
 /*
  * The footer for The Ubyssey 2012 theme.
  * Closes .l-content and #page.
- *
  */
 ?>
-
 
 	</div><!-- .l-content -->
 
@@ -55,7 +53,6 @@
 	</footer><!-- .l-primaryfooter -->
 
 </div><!-- #page -->
-
 
 <?php wp_footer(); ?>
 
