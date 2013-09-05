@@ -2679,6 +2679,11 @@ img.resp,
     border: 1px solid #CCCCCC;
 }
 
+.adsanity-group {
+    border: 1px solid #CCCCCC;
+    margin-bottom: 20px;
+}
+
 .widgettitle {
     display: none;
 }
