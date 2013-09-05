@@ -2672,12 +2672,13 @@ img.resp,
     width: 300px;
 }
 
-..ad-468x60 {
+.ad-468x60 {
     margin: 15px auto;
     width: 468px;
 }
 
 .adsanity-group {
+    margin-bottom: 20px;
     border: 1px solid #CCCCCC;
 }
 
