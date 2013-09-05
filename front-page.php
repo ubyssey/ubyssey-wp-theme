@@ -249,6 +249,14 @@ get_header(); ?>
                 </div><!-- .content -->
             </div><!-- culture .feature-box -->
 
+            <?php adsanity_show_ad_group(
+                array(
+                    'group_ids'     => array(227), // an array of valid group ids
+                    'num_ads'       => 1, // number of ads to show total
+                    'num_columns'   => 1 // number of ads to show per row
+                )
+            ); ?>
+
             <!-- OPINION FEATURE BOX -->
             <div class="feature-box opinion">
                 <header class="clearfix">
