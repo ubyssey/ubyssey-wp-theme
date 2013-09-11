@@ -6,15 +6,15 @@
  */
 get_header(); ?>
 
-    <div class="l-featured single">
+    <div class="l-fullwidth single">
         <?php while( have_posts() ) : the_post(); ?>
 
-            <span class="date"><?php the_time('F j, Y, g:ia T'); ?></span>
-            <h1 class="l-featured title"><?php the_title(); ?></h1>
-            <span class="l-featured snippet"><?php echo get_post_meta(get_the_ID(), 'snippet', true); ?></span>
-            <span>By: <?php the_author_posts_link(); ?></a></span>
+            <span class="l-fullwidth date"><?php the_time('F j, Y, g:ia T'); ?></span>
+            <h1 class="l-fullwidth title"><?php the_title(); ?></h1>
+            <p class="l-fullwidth snippet"><?php echo get_post_meta(get_the_ID(), 'snippet', true); ?></p>
+            <span class="l-fullwidth author"><span class="blue-green">&#9658;</span> By <?php the_author(); ?></a></span>
 
-            <div class="entry-content"><?php the_content(); ?></div>
+            <div class="l-fullwidth entry-content"><?php the_content(); ?></div>
 
         <?php endwhile; //end of loop ?>
 
