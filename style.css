@@ -2777,12 +2777,6 @@ img.resp,
     width: 50%;
 }
 
-.l-fullwidth .wp-caption:after {
-    clear: both;
-    content: "";
-    display: block;
-}
-
 .fw_center {
     margin-left: 15%;
     margin-right: 15%;
