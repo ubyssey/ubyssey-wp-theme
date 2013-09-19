@@ -2860,12 +2860,21 @@ img.resp,
     .l-fullwidth h1 {
         padding-left: 0;
         padding-right: 0;
+        font-size: 35px;
+    }
+
+    .l-fullwidth.author {
+        font-size: 20px;
     }
 
     .l-fullwidth .wp-caption-text {
         margin-right: 0;
         margin-left: 0;
         width: auto;
+    }
+
+    .fw_quote {
+        font-size: 24px;
     }
 }
 
