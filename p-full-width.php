@@ -11,7 +11,7 @@ get_header(); ?>
     <div class="l-fullwidth single">
         <?php while( have_posts() ) : the_post(); ?>
 
-            <div class="l-fullwidth-center l-contained">
+            <div class="fw_center clearfix">
                 <span class="l-fullwidth date"><?php the_time('F j, Y, g:ia T'); ?></span>
                 <h1 class="l-fullwidth title"><?php the_title(); ?></h1>
                 <p class="l-fullwidth snippet"><?php echo get_post_meta(get_the_ID(), 'snippet', true); ?></p>
