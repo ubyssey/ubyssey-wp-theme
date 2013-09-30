@@ -203,8 +203,8 @@ function get_time_since_posted() {
 }
 
 // Removes the visual editor for everyone
-add_filter ( 'user_can_richedit' , create_function ( '$a' , 'return false;' ) , 50 );
-//add_filter( 'user_can_richedit' , '__return_false', 50 );
+//add_filter ( 'user_can_richedit' , create_function ( '$a' , 'return false;' ) , 50 );
+add_filter( 'user_can_richedit' , '__return_false', 50 );
 
 // custom admin login logo
 function custom_login_logo() {
@@ -248,26 +248,3 @@ function custom_post_author_archive( &$query )
     remove_action( 'pre_get_posts', 'custom_post_author_archive' ); // run once!
 }
 add_action( 'pre_get_posts', 'custom_post_author_archive' );
-
-add_filter('pre_get_posts', 'query_post_type');
-function query_post_type($query) {
-    //if(is_category() || is_tag()) {
-        $post_type = get_query_var('post_type');
-        if($post_type)
-            $post_type = $post_type;
-        else
-            $post_type = array('post','news'); // replace cpt to your custom post type
-        $query->set('post_type',$post_type);
-        return $query;
-    //}
-}
-
-add_action('init', 'category_cpt_rewrites');
-function category_cpt_rewrites() {
-    $custom_post_types = array('video', 'audio', 'photo', 'file'); //some example post types
-    foreach ( $custom_post_types as $post_type ) {
-        $rule = '^' . $post_type . '/category/(.+?)/?$';
-        $rewrite = 'index.php?post_type=' . $post_type . '&category_name=$matches[1]';
-        add_rewrite_rule($rule,$rewrite,'top');
-    }
-}
