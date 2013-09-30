@@ -261,3 +261,13 @@ function query_post_type($query) {
         return $query;
     //}
 }
+
+add_action('init', 'category_cpt_rewrites');
+function category_cpt_rewrites() {
+    $custom_post_types = array('video', 'audio', 'photo', 'file'); //some example post types
+    foreach ( $custom_post_types as $post_type ) {
+        $rule = '^' . $post_type . '/category/(.+?)/?$';
+        $rewrite = 'index.php?post_type=' . $post_type . '&category_name=$matches[1]';
+        add_rewrite_rule($rule,$rewrite,'top');
+    }
+}
