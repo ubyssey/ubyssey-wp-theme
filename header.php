@@ -108,22 +108,11 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div id="page">
-    <div class="l-topad l-contained advertisement hide-mobile">
+    <div class="l-topad l-contained advertisement hide-tablet">
         <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar( 'Header Sidebar')) : ?>
         <?php endif; ?>
-
-        <?php adsanity_show_ad_group(
-            array(
-                'group_ids'     => array(211), // an array of valid group ids
-                'num_ads'       => 1, // number of ads to show total
-                'num_columns'   => 1 // number of ads to show per row
-            )
-        ); ?>
-
-        <!-- MANUALLY ADD TOP BANNER AD HERE -->
-        <!-- <a href="http://www.planning.ubc.ca/vancouver_home/news_and_events/calendar_of_events/events172/2013-06.php"><img src="<?php echo get_template_directory_uri(); ?>/images/ISMP_WebBanner_01.jpg" alt=""></a> -->
     </div><!-- .l-topad -->
-    <div class="l-topad-mobile l-contained advertisement">
+    <div class="l-topad-mobile l-contained advertisement hide-desktop">
         <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar( 'Mobile Header Sidebar')) : ?>
         <?php endif; ?>
     </div><!-- .l-topad -->

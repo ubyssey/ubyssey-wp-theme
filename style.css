@@ -440,39 +440,9 @@ small {
 .l-topad {
   width: 728px !important;
 }
-.l-topad ul,
-.l-topad li {
-  margin: 0;
-  padding: 0;
-}
-.l-topad ul {
-  margin: 5px auto;
-  width: 728px !important;
-  display: none;
-}
-@media only screen and (min-width: 743px) {
-  .l-topad ul {
-    display: block;
-  }
-}
 .l-topad img {
   margin: 0 auto;
   display: block;
-}
-.l-topad-mobile ul,
-.l-topad-mobile li {
-  margin: 0;
-  padding: 0;
-}
-.l-topad-mobile ul {
-  margin: 0 auto;
-  width: 320px !important;
-  display: block;
-}
-@media only screen and (min-width: 743px) {
-  .l-topad-mobile ul {
-    display: none;
-  }
 }
 .l-topad-mobile img {
   margin: 0 auto;
@@ -2683,7 +2653,12 @@ img.resp,
 
 .adsanity-group {
     border: 1px solid #CCCCCC;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+}
+
+.advertisement > .adsanity-group {
+    border: none;
+    margin-bottom: 0;
 }
 
 .widgettitle {

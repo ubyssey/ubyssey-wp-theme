@@ -48,7 +48,7 @@
             <?php get_search_form(); ?>
         </div>
         <div class="dingbat"><a href="/" class="dingbat">U</a></div>
-        <div class="copyright">Copyright The Ubyssey 2012 - Site by <a href="http://rileytomasek.com">Riley Tomasek</a></div>
+        <div class="copyright">Copyright The Ubyssey 2013 - Site by <a href="http://rileytomasek.com">Riley Tomasek</a></div>
     </footer><!-- .l-primaryfooter -->
 
 </div><!-- #page -->
