@@ -17,7 +17,6 @@
                 <li><a href="/features/">Features</a></li>
                 <li><a href="/sports/">Sports</a></li>
                 <li><a href="/video/">Video</a></li>
-                <li><a href="/photos/">Photos</a></li>
                 <li><a href="/theblog/">Blog</a></li>
             </ul>
         </nav>
@@ -35,8 +34,6 @@
                 <li class="hide-tablet"><a href="<?php bloginfo('rss2_url'); ?>">Feed</a></li>
                 <?php /* @TODO: How to do archives page? */ ?>
                 <li><a href="/archive/">Archives</a></li>
-                <?php /* @TODO: Find out what 1 links to add */ ?>
-                <li><a href="/link-img/">Link</a></li>
             </ul>
             <ul class="other2 hide-mobile hide-tablet">
                 <li><a href="https://www.facebook.com/ubyssey/">Facebook</a></li>

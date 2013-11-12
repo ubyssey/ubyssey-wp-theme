@@ -168,7 +168,6 @@
                 <li><a href="/features/" class="<?php if( is_post_type_archive( 'features' ) || 'features' == get_post_type() ){ echo 'active'; }?>">Features</a></li>
                 <li><a href="/sports/" class="<?php if( is_post_type_archive( 'sports' ) || 'sports' == get_post_type() ){ echo 'active'; }?>">Sports</a></li>
                 <li><a href="/videos/" class="<?php if( is_post_type_archive( 'videos' ) || 'videos' == get_post_type() ){ echo 'active'; }?>">Video</a></li>
-                <li><a href="/photos/" class="<?php if( is_post_type_archive( 'photos' ) || 'photos' == get_post_type() ){ echo 'active'; }?>">Photos</a></li>
                 <li><a href="/theblog/">Blog</a></li>
             </ul>
             <select class="show-mobile" >
@@ -179,7 +178,6 @@
                 <option value="/features/">Features</option>
                 <option value="/sports/">Sports</option>
                 <option value="/videos/">Video</option>
-                <option value="/photos/">Photos</option>
                 <option value="/vilestblog/">Blog</option>
             </select>
         </div><!-- .l-contained -->
