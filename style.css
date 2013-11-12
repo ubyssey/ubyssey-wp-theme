@@ -825,7 +825,8 @@ nav.l-primarynav {
 }
 @media only screen and (min-width: 850px) {
   nav.l-primarynav li a {
-    width: 12.5%;
+    width: 14.285714286%;
+    width: calc(100% / 7);
     padding: 8px;
     -webkit-transition-property: background;
     -moz-transition-property: background;
@@ -874,6 +875,11 @@ nav.l-primarynav li a:hover {
   nav.l-primarynav li:nth-child(4) a,
   nav.l-primarynav li:last-child a {
     border-right: 2px solid #FDFDFD;
+  }
+}
+@media only screen and (max-width: 849px) {
+  nav.l-primarynav li:last-child a {
+    width: 25.3%;
   }
 }
 /* Remove border on large screen */
@@ -2277,14 +2283,15 @@ h1 a span.ams-elections-header.dingbat {
 @media only screen and (min-width: 850px) {
   .primaryfooter .secondary-nav {
     margin-top: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: 100%;
     border-top: 2px solid #cccccc;
     border-bottom: 1px solid #cccccc;
   }
   .primaryfooter .secondary-nav li {
-    display: inline-block;
-    width: 10.7%;
+    float: left;
+    width: 14.285714286%;
+    width: calc(100% / 7);
     font-size: 17px;
   }
   .primaryfooter .secondary-nav li h3 {
@@ -2302,7 +2309,7 @@ h1 a span.ams-elections-header.dingbat {
   .primaryfooter .link-farm {
     float: left;
     width: 50%;
-    margin-top: 20px;
+    margin: 0 1% 20px 0;
   }
   .primaryfooter .link-farm li {
     text-align: left;
@@ -2326,6 +2333,9 @@ h1 a span.ams-elections-header.dingbat {
   .primaryfooter .link-farm .other,
   .primaryfooter .link-farm .other2 {
     margin-left: 25%;
+  }
+  .primaryfooter .link-farm {
+    margin-right: 5%;
   }
 }
 .primaryfooter .secondary-nav li:first-child,
@@ -2351,7 +2361,7 @@ h1 a span.ams-elections-header.dingbat {
 }
 @media only screen and (min-width: 500px) {
   .primaryfooter .search-form {
-    margin-top: 10px;
+    margin-top: 20px;
     clear: both;
     display: block;
     position: static;
@@ -2365,32 +2375,17 @@ h1 a span.ams-elections-header.dingbat {
 }
 @media only screen and (min-width: 850px) {
   .primaryfooter .search-form {
-    display: inline;
+    display: block;
     width: 228px;
-    position: relative;
-    left: -27.5%;
-    top: -128px;
+    float: left;
+    margin-top: 0;
+    clear: none;
   }
 }
 @media only screen and (min-width: 500px) {
   .primaryfooter .search-form form {
     width: 278px;
-    margin-left: 25%;
-  }
-}
-@media only screen and (min-width: 600px) {
-  .primaryfooter .search-form form {
-    margin-left: 30%;
-  }
-}
-@media only screen and (min-width: 750px) {
-  .primaryfooter .search-form form {
-    margin-left: 31%;
-  }
-}
-@media only screen and (min-width: 850px) {
-  .primaryfooter .search-form form {
-    width: 228px;
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 500px) {
@@ -2398,19 +2393,16 @@ h1 a span.ams-elections-header.dingbat {
     width: 250px;
   }
 }
-@media only screen and (min-width: 850px) {
-  .primaryfooter .search-form form input:first-child {
-    width: 200px;
-  }
-}
 .primaryfooter .dingbat {
   font-family: "AgincourtRegular";
-  color: #0071c9;
   font-size: 300px;
-  line-height: 220px;
-  padding: 20px 15px 20px 0;
+  padding: 20px 0 20px 0;
   margin: 0;
   text-align: center;
+}
+.dingbat-text {
+    display: block;
+    line-height: 205px;
 }
 @media only screen and (min-width: 500px) {
   .primaryfooter .dingbat {
@@ -2419,14 +2411,16 @@ h1 a span.ams-elections-header.dingbat {
 }
 @media only screen and (min-width: 850px) {
   .primaryfooter .dingbat {
-    display: inline;
-    margin-left: 18.4601113%;
-    /* 199/1078 */
-  
-    margin-top: 40px;
-    font-size: 165px;
-    line-height: 155px;
+    display: block;
+    margin: 0 auto;
+    font-size: 170px;
     padding: 0;
+    clear: none;
+    float: right;
+    overflow: none;
+  }
+  .dingbat-text {
+      line-height: 120px;
   }
 }
 .primaryfooter .copyright {
@@ -2453,6 +2447,7 @@ h1 a span.ams-elections-header.dingbat {
   color: #0071c9;
 }
 .primaryfooter a {
+  color: #0071c9;
   text-decoration: none;
 }
 /* ==|== riley added helper classes ========================================
@@ -2643,28 +2638,23 @@ img.resp,
     margin: 15px auto;
     width: 300px;
 }
-
 .ad-468x60 {
     margin: 20px auto;
     padding: 15px 93px 15px 92px;
     width: 468px;
     border: 1px solid #CCCCCC;
 }
-
 .adsanity-group {
     border: 1px solid #CCCCCC;
     /*margin-bottom: 20px;*/
 }
-
 .advertisement > .adsanity-group {
     border: none;
     margin-bottom: 0;
 }
-
 .widgettitle {
     display: none;
 }
-
 .tweet-feed {
     display: none;
 }
@@ -2684,12 +2674,10 @@ img.resp,
 .l-fullwidth.single {
     margin-top: 40px;
 }
-
 .l-fullwidth.date {
     color: #535353;
     font-family: 'adelle', sans-serif;
 }
-
 .l-fullwidth h1 {
     text-transform: uppercase;
     font-family: 'adelle', sans-serif;
@@ -2698,7 +2686,6 @@ img.resp,
     margin: 5px 0;
     line-height: 1;
 }
-
 .l-fullwidth.snippet {
     margin: 5px 0;
     padding: 0;
@@ -2707,27 +2694,22 @@ img.resp,
     font-size: 24px;
     line-height: 1.2;
 }
-
 .l-fullwidth.author {
     font-size: 24px;
     font-weight: 700;
 }
-
 .l-fullwidth.entry-content {
     margin-top: 20px;
 }
-
 .l-fullwidth > p {
     padding-left: 15%;
     padding-right: 1%;
     width: 40%;
     float: left;
 }
-
 .l-fullwidth img {
     width: 100%;
 }
-
 .l-fullwidth .wp-caption-text {
     background-color: #313030;
     background-image: url("images/caption.png");
@@ -2746,17 +2728,14 @@ img.resp,
     position: relative;
     width: 35%;
 }
-
 .fw_one_image .wp-caption-text {
     margin-right: 10%;
     width: 50%;
 }
-
 .fw_center {
     margin-left: 15%;
     margin-right: 15%;
 }
-
 .fw_right {
     padding-left: 2%;
     padding-right: 15%;
@@ -2764,37 +2743,31 @@ img.resp,
     float: right;
     border-left: 1px solid #D6D6D6;
 }
-
 .fw_quote {
     font-family: 'adelle', sans-serif;
     font-size: 30px;
     font-style: oblique;
     font-weight: 100;
 }
-
 .fw_quote_source {
     text-align: right;
     font-weight: 100;
 }
-
 .fw_right > ul {
     clear: both;
     list-style: none;
 }
-
 .fw_right li:before {
     content: '\25B6';
     margin-right: 5px;
     color: #0F3C54;
 }
-
 .fw_list {
     font-family: 'adelle', sans-serif;
     font-size: 20px;
     font-style: oblique;
     font-weight: 300;
 }
-
 .fw_dropcap {
     float: left;
     font-family: 'adelle', sans-serif;
@@ -2803,7 +2776,6 @@ img.resp,
     line-height: 60px;
     padding: 10px 5px 0 0;
 }
-
 .fw_section_break {
     margin-top: 0;
     margin-bottom: 25px;
@@ -2811,20 +2783,16 @@ img.resp,
     font-style: oblique;
     font-size: 50px;
 }
-
 .fw_fullwidth {
     margin-bottom: 25px;
 }
-
 .fw_two_images {
     margin-bottom: 25px;
 }
-
 .fw_two_images img:first-child {
     float: left;
     width: 49%;
 }
-
 .fw_two_images img:last-child {
     float: right;
     width: 49%;
@@ -2837,17 +2805,14 @@ img.resp,
         padding-right: 0;
         font-size: 35px;
     }
-
     .l-fullwidth.author {
         font-size: 20px;
     }
-
     .l-fullwidth .wp-caption-text {
         margin-right: 0;
         margin-left: 0;
         width: auto;
     }
-
     .fw_quote {
         font-size: 24px;
     }
@@ -2868,7 +2833,6 @@ img.resp,
         margin-left: 0;
         margin-right: 0;
     }
-
     .fw_right {
         padding: 0;
         margin: 0 10% 25px 10%;
@@ -2876,7 +2840,6 @@ img.resp,
         border: none;
         float: left;
     }
-
     .l-fullwidth > p {
         padding: 0;
         margin-left: 1%;
@@ -2897,12 +2860,10 @@ img.resp,
         margin-left: 20%;
         margin-right: 20%;
     }
-
     .fw_right {
         padding-right: 20%;
         width: 20%;
     }
-
     .l-fullwidth > p {
         padding-left: 20%;
         width: 35%;
