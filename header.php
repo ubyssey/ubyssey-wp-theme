@@ -30,6 +30,10 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 
+    <link rel='stylesheet' href='<?php bloginfo( 'template_url' ); ?>/popup/style.css' type='text/css' media='all' />
+    <script src="<?php bloginfo( 'template_url' ); ?>/popup/jquery.cookie.js"></script>
+    <script src="<?php bloginfo( 'template_url' ); ?>/popup/script.js"></script>
+
     <!-- fitvid - responsive videos -->
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.fitvids-ck.js"></script>
     <script>
@@ -95,6 +99,8 @@
 
     <script type="text/javascript" src="//use.typekit.net/qex0fvk.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <div class="satire-overlay"></div>
 </head>
 
 <body <?php body_class(); ?>>

@@ -1,0 +1,40 @@
+.satire-overlay {
+    display: none;
+    background-color: rgba(0,0,0,0.75);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+.satire-popup {
+    width: 640px;
+    margin: 10% auto 0 auto;
+    padding: 32px;
+    position: relative;
+    background: #FFFFFF;
+    overflow: hidden;
+    box-shadow: 0 10px 30px 0 #000000;
+}
+.satire-column {
+    width: 300px;
+}
+.satire-left {
+    float: left;
+}
+.satire-right {
+    float: right;
+}
+a.satire-rebel {
+    color: red;
+}
+@media only screen and (max-width: 704px) {
+    .satire-popup {
+        width: 75%;
+    }
+    .satire-column {
+        width: 100%;
+    }
+    .satire-left {
+        margin-bottom: 32px;
+    }
+}
