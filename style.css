@@ -2668,6 +2668,14 @@ img.resp,
 }
 
 /* =========================================================
+   Utility
+   ========================================================= */
+
+.center-text {
+    text-align: center;
+}
+
+/* =========================================================
    Featured article styles
    ========================================================= */
 
@@ -2735,6 +2743,12 @@ img.resp,
 .fw_center {
     margin-left: 15%;
     margin-right: 15%;
+}
+.fw_left {
+    float: left;
+    margin-left: 20%;
+    margin-right: 1%;
+    width: 35%;
 }
 .fw_right {
     padding-left: 2%;
@@ -2869,4 +2883,3 @@ img.resp,
         width: 35%;
     }
 }
-
