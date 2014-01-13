@@ -126,7 +126,7 @@ get_header('ams-elections-2014'); ?>
                         array(
                             'taxonomy' => 'ams_category',
                             'field' => 'slug',
-                            'terms' => '2014'
+                            'terms' => 'ams-elections-2014'
                         ),
                         array(
                             'taxonomy' => 'ams_tag',
