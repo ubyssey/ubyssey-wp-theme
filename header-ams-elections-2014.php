@@ -18,7 +18,7 @@
     <title><?php if(!is_home()){ wp_title( '|', true, 'right'); echo ' | '; } ?>The Ubyssey, UBC's official student newspaper</title>
 
     <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
-    <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/custom/elections-2014/style.css">
+    <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2014/style.css">
 
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
@@ -29,8 +29,8 @@
     <!-- jQuery loaded here just so that I can write inline for dev @TODO: fix all scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-    <script src="<?php bloginfo( 'template_url' ); ?>/custom/elections-2014/timer/jquery.countdown.js"></script>
-    <script src="<?php bloginfo( 'template_url' ); ?>/custom/elections-2014/script.js"></script>
+    <script src="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2014/timer/jquery.countdown.js"></script>
+    <script src="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2014/script.js"></script>
 
     <!-- fitvid - responsive videos -->
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.fitvids-ck.js"></script>
@@ -86,7 +86,7 @@
 
     <?php wp_head(); ?>
 
-    <script type="text/javascript" src="//use.typekit.net/kra5lnc.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/qex0fvk.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 

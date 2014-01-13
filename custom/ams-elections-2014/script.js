@@ -12,7 +12,7 @@
                 'hrs',
                 'mins',
                 'secs'
-            ],
+            ].map(String.toUpperCase),
             labels1: [
                 'year',
                 'month',
@@ -21,7 +21,7 @@
                 'hr',
                 'min',
                 'sec'
-            ]
+            ].map(String.toUpperCase),
         });
     });
 //});

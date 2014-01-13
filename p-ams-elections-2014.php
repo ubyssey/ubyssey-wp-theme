@@ -1,34 +1,32 @@
 <?php
 /**
- * Template Name: 2014 AMS Elections Page
+ * Template Name: AMS Elections 2014 Page
  *
  * Pulls posts of any type that have the category ams-elections for the feed,
  * as well as a custom sidebar that lists this year's candidates.
  *
  */
 
-get_header('clean'); ?>
+get_header('ams-elections-2014'); ?>
 </div>
 
 <div class="l-content clearfix">
     <div class="fw_center center-text">
         <div class="elections-header">
-            <p class="ams-2014-line-1">presents</p>
-            <p class="ams-2014-line-2">The AMS Elections 2014</p>
-            <p class="ams-2014-line-3 countdown"></p>
-            <p class="ams-2014-line-4">until voting</p>
+            <p class="countdown"></p>
         </div>
     </div>
 </div>
 
 <div class="l-content l-contained clearfix">
     <div class="l-main section-front">
-        <div class="stories-img"><img src=""></div>
+        <div class="stories-img"><img src="<?php bloginfo('template_url'); ?>/custom/ams-elections-2014/stories.png"></div>
         <div class="featured-slider resp hide-mobile">
             <?php
                 // Get most recent news, opinion, or features articles with the ams-elections category
                 $args = array(
                     'post_type' => array('news', 'opinion', 'features'),
+                    'year' => 2014,
                     'posts_per_page' => '3',
                     'tax_query' => array(
                         'relation' => 'OR',
@@ -91,30 +89,9 @@ get_header('clean'); ?>
                 foreach($the_query->posts as $exclude) {
                     $to_exclude[] = $exclude->ID;
                 }
-
-                $args2 = array(
-                    'post_type' => array('news', 'opinion', 'features'),
-                    'post__not_in' => $to_exclude,
-                    'tax_query' => array(
-                        'relation' => 'OR',
-                        array(
-                            'taxonomy' => 'news_category',
-                            'field' => 'slug',
-                            'terms' => 'ams-elections'
-                        ),
-                        array(
-                            'taxonomy' => 'opinion_category',
-                            'field' => 'slug',
-                            'terms' => 'ams-elections'
-                        ),
-                        array(
-                            'taxonomy' => 'feature_category',
-                            'field' => 'slug',
-                            'terms' => 'ams-elections'
-                        )
-                    )
-                );
-                $the_query = new WP_Query( $args2 );
+                $args['post__not_in'] = $to_exclude;
+                $args['posts_per_page'] = 10;
+                $the_query = new WP_Query( $args );
 
                 // The Loop
                 while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -132,10 +109,10 @@ get_header('clean'); ?>
     </div><!-- .l-main -->
 
     <div class="l-secondary hide-mobile">
-        <div class="candidates-img"><img src=""></div>
+        <div class="candidates-img"><img src="<?php bloginfo('template_url'); ?>/custom/ams-elections-2014/candidates.png"></div>
         <div class="candidates">
-            <?php
-                echo '<ul><span class="position">President</span>';
+            <ul><span class="position">President</span>
+                <?php
                 $args = array(
                     'post_type' => 'ams',
                     'orderby' => 'title',
@@ -164,10 +141,11 @@ get_header('clean'); ?>
                     echo '<span class="candidate-name">';
                     the_title();
                     echo '</span></li></a>';
-                endwhile;
-                echo '</ul>';
+                endwhile; ?>
+            </ul>
 
-                echo '<ul><span class="position">VP Academic</span>';
+            <ul><span class="position">VP Academic</span>
+                <?php
                 $args['tax_query'][1]['terms'] = 'vp-academic';
                 $the_query = new WP_Query($args);
                 // The Loop
@@ -179,10 +157,11 @@ get_header('clean'); ?>
                     echo '<span class="candidate-name">';
                     the_title();
                     echo '</span></li></a>';
-                endwhile;
-                echo '</ul>';
+                endwhile; ?>
+            </ul>
 
-                echo '<ul><span class="position">VP External</span>';
+            <ul><span class="position">VP External</span>
+                <?php
                 $args['tax_query'][1]['terms'] = 'vp-external';
                 $the_query = new WP_Query($args);
                 // The Loop
@@ -194,10 +173,11 @@ get_header('clean'); ?>
                     echo '<span class="candidate-name">';
                     the_title();
                     echo '</span></li></a>';
-                endwhile;
-                echo '</ul>';
+                endwhile; ?>
+            </ul>
 
-                echo '<ul><span class="position">VP Admin</span>';
+            <ul><span class="position">VP Admin</span>
+                <?php
                 $args['tax_query'][1]['terms'] = 'vp-admin';
                 $the_query = new WP_Query($args);
                 // The Loop
@@ -209,10 +189,11 @@ get_header('clean'); ?>
                     echo '<span class="candidate-name">';
                     the_title();
                     echo '</span></li></a>';
-                endwhile;
-                echo '</ul>';
+                endwhile; ?>
+            </ul>
 
-                echo '<ul><span class="position">VP Finance</span>';
+            <ul><span class="position">VP Finance</span>
+                <?php
                 $args['tax_query'][1]['terms'] = 'vp-finance';
                 $the_query = new WP_Query($args);
                 // The Loop
@@ -224,36 +205,36 @@ get_header('clean'); ?>
                     echo '<span class="candidate-name">';
                     the_title();
                     echo '</span></li></a>';
-                endwhile;
-                echo '</ul>';
+                endwhile; ?>
+            </ul>
 
-                echo '<ul><span class="position">Board of Governors</span>';
+            <ul><span class="position">Board of Governors</span>
+                <?php
                 $args['tax_query'][1]['terms'] = 'bog';
                 $the_query = new WP_Query($args);
                 // The Loop
                 while ($the_query->have_posts()) : $the_query->the_post();
-                    echo '<a href="' . get_permalink() . '"><li>';
+                    echo '<a href="' . get_permalink() . '"><li class="small">';
                     if (has_post_thumbnail()) {
                         the_post_thumbnail(array(64, 64));
                     }
                     echo '</li></a>';
-                endwhile;
-                echo '</ul>';
+                endwhile; ?>
+            </ul>
 
-                echo '<ul><span class="position">Academic Senate</span>';
+            <ul><span class="position">Academic Senate</span>
+                <?php
                 $args['tax_query'][1]['terms'] = 'senate';
                 $the_query = new WP_Query($args);
                 // The Loop
                 while ($the_query->have_posts()) : $the_query->the_post();
-                    echo '<a href="' . get_permalink() . '"><li>';
+                    echo '<a href="' . get_permalink() . '"><li class="small">';
                     if (has_post_thumbnail()) {
                         the_post_thumbnail(array(64, 64));
                     }
                     echo '</li></a>';
-                endwhile;
-                echo '</ul>';
-                ?>
+                endwhile; ?>
+            </ul>
         </div>
     </div>
-
 <?php get_footer(); ?>

@@ -1,0 +1,88 @@
+/* =========================================================
+   2014 AMS elections styles
+   ========================================================= */
+
+.typekit-badge {
+    display: none !important;
+}
+
+a:visited:hover {
+    color: #0071C9;
+}
+a, a:visited {
+    color: #2881AB;
+}
+
+.elections-header {
+    height: 270px;
+    font-family: 'lft-etica', Arial, sans-serif;
+    background: url(bg.png);
+    background-size: cover;
+}
+
+.countdown {
+    margin: 0;
+    padding: 192px 60px 0 0;
+}
+
+.countdown_section {
+    display: inline-block;
+    margin: 0 30px;
+    line-height: 1;
+    color: #128EC2;
+}
+.countdown_amount {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.stories-img, .candidates-img {
+    margin: 60px 0 24px 0;
+    text-align: center;
+}
+
+.candidates ul {
+    padding: 0;
+}
+.candidates ul:first-child {
+    margin-top: 0;
+}
+.candidates li {
+    list-style: none;
+    /*margin-top: 12px;*/
+    padding: 6px;
+    display: block;
+    /*width: 100%;*/
+}
+.candidates li:hover {
+    background: #eeeeee;
+    border-radius: 6px;
+}
+.candidates li:first-child {
+    /*margin-top: 0;*/
+}
+.candidates li.small {
+    display: inline-block;
+    /*width: 48px;*/
+}
+.candidates img {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background: #ffffff;
+}
+
+.position {
+    margin: 12px 0;
+    display: block;
+    font-size: 12px;
+    font-family: 'lft-etica', Arial, sans-serif;
+    color: #2881AB;
+    text-transform: uppercase;
+}
+
+.candidate-name {
+    margin-left: 12px;
+    font-size: 24px;
+    vertical-align: middle;
+}
