@@ -137,8 +137,8 @@
                     <span><a href="https://www.facebook.com/ubyssey/"><span class="fs1 facebook" aria-hidden="true" data-icon="&#x22;"></span></a><a href="http://twitter.com/Ubyssey"><span class="fs1 twitter" aria-hidden="true" data-icon="&#x21;"></span></a><a href="<?php bloginfo('rss2_url'); ?>"><span class="fs1" aria-hidden="true" data-icon="&#x27;"></span></a></span>
                 </div>
             </div><!-- .l-leftheader -->
-            <div class="l-rightheader clearfix">
-                <nav class="second-nav hide-mobile">
+            <div class="l-rightheader hide-mobile clearfix">
+                <nav class="second-nav">
                     <ul>
                         <li><a href="/advertise-with-us/">Advertise</a></li>
                         <li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
