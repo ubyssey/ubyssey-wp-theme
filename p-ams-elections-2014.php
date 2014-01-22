@@ -13,7 +13,9 @@ get_header('ams-elections-2014'); ?>
 <div class="l-content clearfix">
     <div class="fw_center center-text">
         <div class="elections-header">
-            <a href="<?php $page = get_page_by_title('AMS Elections 2014'); echo get_permalink($page->ID) ?>"><p class="countdown"></p></a>
+            <a href="<?php $page = get_page_by_title('AMS Elections 2014'); echo get_permalink($page->ID) ?>"><img class="elections-header" src="<?php $dir = get_template_directory_uri(); echo $dir; ?>/custom/ams-elections-2014/header-top.png"></img></a>
+            <p class="countdown"></p>
+            <img src="<?php echo $dir; ?>/custom/ams-elections-2014/header-bottom.png"></img>
         </div>
     </div>
 </div>
@@ -35,17 +37,17 @@ get_header('ams-elections-2014'); ?>
                         array(
                             'taxonomy' => 'news_category',
                             'field' => 'slug',
-                            'terms' => 'ams-elections'
+                            'terms' => 'ams-elections-featured'
                         ),
                         array(
                             'taxonomy' => 'opinion_category',
                             'field' => 'slug',
-                            'terms' => 'ams-elections'
+                            'terms' => 'ams-elections-featured'
                         ),
                         array(
                             'taxonomy' => 'feature_category',
                             'field' => 'slug',
-                            'terms' => 'ams-elections'
+                            'terms' => 'ams-elections-featured'
                         )
                     )
                 );
@@ -93,6 +95,9 @@ get_header('ams-elections-2014'); ?>
                 }
                 $args['post__not_in'] = $to_exclude;
                 $args['posts_per_page'] = 10;
+                $args['tax_query'][0]['terms'] = array('ams-elections', 'ams-elections-featured');
+                $args['tax_query'][1]['terms'] = array('ams-elections', 'ams-elections-featured');
+                $args['tax_query'][2]['terms'] = array('ams-elections', 'ams-elections-featured');
                 $the_query = new WP_Query( $args );
 
                 // The Loop
@@ -110,7 +115,7 @@ get_header('ams-elections-2014'); ?>
         </div>
     </div><!-- .l-main -->
 
-    <div class="l-secondary hide-mobile">
+    <div class="l-secondary">
         <div class="section-header">
             <h1 class="elections">The Candidates</h1>
         </div>

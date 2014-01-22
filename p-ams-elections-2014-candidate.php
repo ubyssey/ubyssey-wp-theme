@@ -13,7 +13,9 @@ get_header('ams-elections-2014'); ?>
 <div class="l-content clearfix">
     <div class="fw_center center-text">
         <div class="elections-header">
-            <a href="<?php $page = get_page_by_title('AMS Elections 2014'); echo get_permalink($page->ID) ?>"><p class="countdown"></p></a>
+            <a href="<?php $page = get_page_by_title('AMS Elections 2014'); echo get_permalink($page->ID) ?>"><img src="<?php $dir = get_template_directory_uri(); echo $dir; ?>/custom/ams-elections-2014/header-top.png"></img></a>
+            <p class="countdown"></p>
+            <img src="<?php echo $dir; ?>/custom/ams-elections-2014/header-bottom.png"></img>
         </div>
     </div>
 </div>

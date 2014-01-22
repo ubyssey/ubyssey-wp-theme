@@ -159,10 +159,11 @@
         </div><!-- .l-contained -->
     </header><!-- .l-masthead -->
 
-    <nav class="l-primarynav">
+    <nav class="l-primarynav hide-mobile">
         <div class="l-contained">
             <ul class="hide-mobile">
                 <li><a href="/news/" class="<?php if( is_post_type_archive( 'news' ) || 'news' == get_post_type() ){ echo 'active'; }?>">News</a></li>
+                <li><a href="/ams/" class="nav-ams-highlight<?php if( is_post_type_archive( 'ams' ) || 'ams' == get_post_type() ){ echo 'active'; }?>">AMS</a></li>
                 <li><a href="/culture/" class="<?php if( is_post_type_archive( 'culture' ) || 'culture' == get_post_type() ){ echo 'active'; }?>">Culture</a></li>
                 <li><a href="/opinion/" class="<?php if( is_post_type_archive( 'opinion' ) || 'opinion' == get_post_type() ){ echo 'active'; }?>">Opinion</a></li>
                 <li><a href="/features/" class="<?php if( is_post_type_archive( 'features' ) || 'features' == get_post_type() ){ echo 'active'; }?>">Features</a></li>
@@ -170,7 +171,7 @@
                 <li><a href="/videos/" class="<?php if( is_post_type_archive( 'videos' ) || 'videos' == get_post_type() ){ echo 'active'; }?>">Video</a></li>
                 <li><a href="/theblog/">Blog</a></li>
             </ul>
-            <select class="show-mobile" >
+            <!--<select class="show-mobile" >
                 <option value="/" selected>Sections</option>
                 <option value="/news/">News</option>
                 <option value="/culture/">Culture</option>
@@ -179,7 +180,7 @@
                 <option value="/sports/">Sports</option>
                 <option value="/videos/">Video</option>
                 <option value="/vilestblog/">Blog</option>
-            </select>
+            </select>-->
         </div><!-- .l-contained -->
     </nav><!-- .l-primarynav -->
 

@@ -825,8 +825,10 @@ nav.l-primarynav {
 }
 @media only screen and (min-width: 850px) {
   nav.l-primarynav li a {
-    width: 14.285714286%;
-    width: calc(100% / 7);
+    width: 12.5%;
+    width: calc(100% / 8);
+    /*width: 14.285714286%;*/
+    /*width: calc(100% / 7);*/
     padding: 8px;
     -webkit-transition-property: background;
     -moz-transition-property: background;
@@ -879,7 +881,7 @@ nav.l-primarynav li a:hover {
 }
 @media only screen and (max-width: 849px) {
   nav.l-primarynav li:last-child a {
-    width: 25.3%;
+    /*width: 25.3%;*/
   }
 }
 /* Remove border on large screen */

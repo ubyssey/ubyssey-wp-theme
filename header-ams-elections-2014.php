@@ -118,7 +118,7 @@
                     </span></span>
                 </div>
             </div><!-- .l-leftheader -->
-            <div class="l-rightheader clearfix">
+            <div class="l-rightheader hide-tablet">
                 <nav class="second-nav hide-mobile">
                     <ul>
                         <li><a href="/advertise-with-us/">Advertise</a></li>
