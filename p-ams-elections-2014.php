@@ -29,7 +29,7 @@ get_header('ams-elections-2014'); ?>
             <?php
                 // Get most recent news, opinion, or features articles with the ams-elections category
                 $args = array(
-                    'post_type' => array('news', 'opinion', 'features'),
+                    'post_type' => array('news', 'opinion', 'features', 'ams'),
                     'year' => 2014,
                     'posts_per_page' => '3',
                     'tax_query' => array(
@@ -46,6 +46,11 @@ get_header('ams-elections-2014'); ?>
                         ),
                         array(
                             'taxonomy' => 'feature_category',
+                            'field' => 'slug',
+                            'terms' => 'ams-elections-featured'
+                        ),
+                        array(
+                            'taxonomy' => 'ams_category',
                             'field' => 'slug',
                             'terms' => 'ams-elections-featured'
                         )
@@ -98,6 +103,7 @@ get_header('ams-elections-2014'); ?>
                 $args['tax_query'][0]['terms'] = array('ams-elections', 'ams-elections-featured');
                 $args['tax_query'][1]['terms'] = array('ams-elections', 'ams-elections-featured');
                 $args['tax_query'][2]['terms'] = array('ams-elections', 'ams-elections-featured');
+                $args['tax_query'][3]['terms'] = array('ams-elections', 'ams-elections-featured');
                 $the_query = new WP_Query( $args );
 
                 // The Loop
