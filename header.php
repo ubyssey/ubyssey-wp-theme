@@ -163,7 +163,7 @@
         <div class="l-contained">
             <ul class="hide-mobile">
                 <li><a href="/news/" class="<?php if( is_post_type_archive( 'news' ) || 'news' == get_post_type() ){ echo 'active'; }?>">News</a></li>
-                <li><a href="/ams-elections-2014/" class="nav-ams-highlight<?php if( is_post_type_archive( 'ams' ) || 'ams' == get_post_type() ){ echo 'active'; }?>">AMS</a></li>
+                <li><a href="/ams/" class="<?php if( is_post_type_archive( 'ams' ) || 'ams' == get_post_type() ){ echo 'active'; }?>">AMS</a></li>
                 <li><a href="/culture/" class="<?php if( is_post_type_archive( 'culture' ) || 'culture' == get_post_type() ){ echo 'active'; }?>">Culture</a></li>
                 <li><a href="/opinion/" class="<?php if( is_post_type_archive( 'opinion' ) || 'opinion' == get_post_type() ){ echo 'active'; }?>">Opinion</a></li>
                 <li><a href="/features/" class="<?php if( is_post_type_archive( 'features' ) || 'features' == get_post_type() ){ echo 'active'; }?>">Features</a></li>
@@ -174,7 +174,7 @@
             <!--<select class="show-mobile" >
                 <option value="/" selected>Sections</option>
                 <option value="/news/">News</option>
-                <option value="/ams-elections-2014/">AMS</option>
+                <option value="/ams/">AMS</option>
                 <option value="/culture/">Culture</option>
                 <option value="/opinion/">Opinion</option>
                 <option value="/features/">Features</option>
