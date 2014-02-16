@@ -2687,6 +2687,24 @@ img.resp,
 }
 
 /* =========================================================
+   Temp
+   ========================================================= */
+
+.outage-notice {
+    background-color: #F2DEDE;
+    border-color: #EBCCD1;
+    border-radius: 4px;
+    color: #A94442;
+    margin: 16px;
+    overflow: hidden;
+}
+
+.outage-notice p {
+    margin: 12px;
+    text-align: center;
+}
+
+/* =========================================================
    Featured article styles
    ========================================================= */
 
