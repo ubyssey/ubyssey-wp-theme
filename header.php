@@ -108,11 +108,6 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div id="page">
-    <div class="outage-notice">
-        <p>Dear readers: The Ubyssey website will undergo maintenance from 12:00 am PST on Sunday, February 16 to 12:00 am PST on Wednesday, February 19.</p>
-        <p>During then, it is expected the website will experience intermittent outages.</p>
-        <p>We thank you for your patience and readership and apologize for any inconvenience this may cause.</p>
-    </div>
     <div class="l-topad l-contained advertisement hide-tablet">
         <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar( 'Header Sidebar')) : ?>
         <?php endif; ?>
