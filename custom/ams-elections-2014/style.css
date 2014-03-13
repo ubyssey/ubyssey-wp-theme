@@ -96,6 +96,7 @@ p.countdown {
     height: 48px;
     border-radius: 24px;
     background: #ffffff;
+    border: 1px solid #008DC2;
 }
 
 .position {
