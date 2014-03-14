@@ -4,10 +4,11 @@
  *
  */
 get_header(); ?>
-    <div class="fw_center center-text">
-        <h1>Welcome to the Social Club</h1>
-        <h2>How we really feel about what's happening at UBC, and other idle gossip</h2>
-    </div>
+        <div class="blog-masthead">
+            <h1 class="blog-title">Welcome to the Social Club</h1>
+            <span class="blog-description">How we really feel about what's happening at UBC, and other idle gossip</span>
+            <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
+        </div>
 
     <div id="blog">
         <?php function get_post_type_taxonomies($id, $type, $tax = 'category') {
@@ -16,22 +17,22 @@ get_header(); ?>
             if (!empty($terms)) {
                 foreach ($terms as $term) {
                     $out[] =
-                        '  <a href="'
-                        .    get_term_link( $term->slug, $type . '_' . $tax) .'">'
-                        .    $term->name
-                        . "</a>\n";
+                        '<a href="' .
+                        get_term_link( $term->slug, $type . '_' . $tax) .'">' .
+                        $term->name .
+                        '</a>';
                 }
             }
-            return implode('', $out);
+            return implode(', ', $out);
         } ?>
         <?php while(have_posts()) : the_post(); ?>
             <div <?php post_class( 'post' ); ?>>
                 <div class="meta left-col hide-mobile">
                     <ul>
-                        <li><?php the_time('F jS, Y'); ?></li>
-                        <li>By <?php the_author_posts_link(); ?></li>
-                        <li><a href="<?php echo substr(get_permalink(), 0, -1) . '#disqus_thread'; ?>"><span class="fs1" aria-hidden="true" data-icon="&#x2b;"></span>&nbsp;<span><?php comments_number('0 comments', '1 comment', '% comments'); ?><span></a></li>
-                        <li>In <?php echo get_post_type_taxonomies($post->ID, $post->post_type, 'category'); ?></li>
+                        <h3><?php the_time('F jS, Y'); ?></h3>
+                        <li>by: <?php the_author_posts_link(); ?></li>
+                        <li>in: <?php $categories = get_post_type_taxonomies($post->ID, $post->post_type, 'category'); echo $categories ?></li>
+                        <li>has:<a href="<?php echo substr(get_permalink(), 0, -1) . '#disqus_thread'; ?>"></span>&nbsp;<span><?php comments_number('0 comments', '1 comment', '% comments'); ?><span class="fs1 meta-comment-icon" aria-hidden="true" data-icon="&#x2b;"></span></a></li>
                     </ul>
                 </div><!-- .meta -->
 
@@ -44,44 +45,41 @@ get_header(); ?>
                 </div>
 
                 <div class="related right-col hide-mobile">
-                    <h3>Related</h3>
+                    <h3>Similar</h3>
                     <?php
-                    $saved = $wp_query;
-                    $cats = strip_tags( get_the_category_list( ',' ) );
-                    $cats = explode( ',', $cats );
-
-                    if( !empty( $cats ) ){
-                        $cat_ids = array();
-                        foreach ( $cats as $cat ) {
-                            $term_data = get_term_by( 'name', $cat, 'category' );
-                            $cat_ids[] = $term_data->term_id;
+                        $args = array(
+                            'post__not_in' => array($post->ID),
+                            'posts_per_page' => '5',
+                            'post_type' => 'blog',
+                            'blog_category' => $categories
+                        );
+                        // The Query
+                        $the_query = new WP_Query( $args );
+                        // The Loop
+                        if ($the_query->have_posts()) {
+                            echo '<ul>';
+                            while ($the_query->have_posts()) {
+                                $the_query->the_post();
+                                echo '<li><a href="' . get_permalink() . '">';
+                                echo '<span class="related-title">' . get_the_title() . '</span>';
+                                echo '<span class="related-timestamp">' . get_the_time(get_option('date_format')) . '</span></a></li>';
+                            }
+                            echo '</ul>';
                         }
-                    }
-                    //print_r($cat_ids);
-                    $cats = implode( ',', $cat_ids );
-
-                    $more_posts = query_posts( array(
-                        'posts_per_page' => $woo_options['woo_more_from_count'],
-                        'post__not_in' => array( get_the_id() ),
-                        'category__and' => $cat_ids )
-                    );
-
-                    if ( have_posts() ) :?>
-                    <ul>
-                        <li>
-                            <?php while ( have_posts() ) : the_post(); $count++; ?>
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                    <span class="related-title"><?php the_title(); ?></span>
-                                    <span><?php the_time( get_option( 'date_format' ) ); ?></span>
-                            </a>
-                            <?php endwhile; ?>
-                        </li>
-                    </ul>
-                    <?php
-                    endif;
-                    $wp_query = $saved;
+                        // Reset Post Data
+                        wp_reset_postdata();
                     ?>
                 </div><!-- /.related -->
+            </div>
+
+            <div class="blog-advertisement">
+                <?php if (function_exists('adsanity_show_ad_group')) {
+                    adsanity_show_ad_group(array(
+                        'group_ids'     => array(1043), // an array of valid group ids
+                        'num_ads'       => 1, // number of ads to show total
+                        'num_columns'   => 1 // number of ads to show per row
+                    ));
+                } ?>
             </div>
 
         <?php endwhile; ?>

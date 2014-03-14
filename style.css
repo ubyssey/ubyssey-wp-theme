@@ -2642,6 +2642,149 @@ img.resp,
 }
 
 /* =========================================================
+   Blog styles
+   ========================================================= */
+
+.blog-masthead {
+    margin: 32px 0;
+    text-align: center;
+}
+
+.blog-title {
+    font-size: 32px;
+    font-family: 'Droid Sans', Arial, sans-serif;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-description {
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Droid Sans', Arial, sans-serif;
+}
+
+#blog {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+#blog img {
+    height: auto;
+    max-width: 100%;
+}
+
+.type-blog.post {
+    margin-bottom: 32px;
+    overflow: hidden;
+}
+
+.left-col, .center-col, .right-col {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.left-col {
+    width: 18%;
+    padding-top: 16px;
+    float: left;
+}
+
+.meta li {
+    margin: 0 0 6px;
+    padding: 6px 0 0;
+    font-size: 16px;
+    border-top: 1px solid #808080;
+}
+
+.meta-comment-icon {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
+
+.center-col {
+    width: 62%;
+    max-width: 560;
+    padding: 12px;
+    float: left;
+    background: #F5F5F5;
+    border: 1px solid #DDDDDD;
+    margin: 0 1%;
+}
+
+.center-col h2 {
+    margin-top: 0;
+}
+
+#blog .wp-caption {
+    border-color: #EEEEEE #DDDDDD #BBBBBB;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+    background: #FFFFFF;
+    padding: 12px 12px 0 12px;
+}
+
+#blog .wp-caption-text {
+    margin: 12px 0;
+    text-align: left;
+}
+
+.right-col {
+    width: 18%;
+    padding-top: 16px;
+    float: left;
+}
+
+.related li {
+    margin: 0 0 6px;
+    padding: 6px 0 0;
+    font-size: 12px;
+    border-top: 1px solid #808080;
+}
+
+.related-timestamp {
+    color: #888888;
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.meta h3, .related h3 {
+    margin: 0;
+}
+
+.meta ul, .related ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Tablet & Smaller */
+@media only screen and (max-width: 850px) {
+    .left-col, .center-col, .right-col {
+        width: 100%;
+        margin: 0;
+        float: none;
+    }
+    .left-col {
+        padding: 0;
+    }
+}
+/* Mobile */
+@media only screen and (max-width: 500px) {
+    .blog-masthead {
+        margin: 8px 0;
+    }
+}
+
+/* =========================================================
    Adsanity styles
    ========================================================= */
 
@@ -2652,12 +2795,12 @@ img.resp,
 .ad-468x60 {
     margin: 20px auto;
     padding: 15px 93px 15px 92px;
-    width: 468px;
+    /*width: 468px;*/
+    max-width: 468px;
     border: 1px solid #CCCCCC;
 }
 .adsanity-group {
     border: 1px solid #CCCCCC;
-    /*margin-bottom: 20px;*/
 }
 .advertisement > .adsanity-group {
     border: none;
@@ -2666,8 +2809,9 @@ img.resp,
 .widgettitle {
     display: none;
 }
-.tweet-feed {
-    display: none;
+.blog-advertisement {
+    margin-bottom: 32px;
+    text-align: center;
 }
 
 /* =========================================================
@@ -2685,13 +2829,12 @@ img.resp,
 .center-text {
     text-align: center;
 }
+.tweet-feed {
+    display: none;
+}
 
 /* =========================================================
-   Temp
-   ========================================================= */
-
-/* =========================================================
-   Featured article styles
+   Full width styles
    ========================================================= */
 
 .l-fullwidth.single {
@@ -2898,6 +3041,10 @@ img.resp,
         width: 35%;
     }
 }
+
+/* =========================================================
+   Temp
+   ========================================================= */
 
 .nav-ams-highlight {
     background: #2A9BF3;
