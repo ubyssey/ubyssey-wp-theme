@@ -75,7 +75,7 @@ get_header(); ?>
             <div class="blog-advertisement">
                 <?php if (function_exists('adsanity_show_ad_group')) {
                     adsanity_show_ad_group(array(
-                        'group_ids'     => array(1043), // an array of valid group ids
+                        'group_ids'     => array(659), // an array of valid group ids
                         'num_ads'       => 1, // number of ads to show total
                         'num_columns'   => 1 // number of ads to show per row
                     ));
