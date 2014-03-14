@@ -171,17 +171,6 @@
                 <li><a href="/videos/" class="<?php if( is_post_type_archive( 'videos' ) || 'videos' == get_post_type() ){ echo 'active'; }?>">Video</a></li>
                 <li><a href="/blog/" class="<?php if( is_post_type_archive( 'blog' ) || 'blog' == get_post_type() ){ echo 'active'; }?>">Blog</a></li>
             </ul>
-            <!--<select class="show-mobile" >
-                <option value="/" selected>Sections</option>
-                <option value="/news/">News</option>
-                <option value="/ams/">AMS</option>
-                <option value="/culture/">Culture</option>
-                <option value="/opinion/">Opinion</option>
-                <option value="/features/">Features</option>
-                <option value="/sports/">Sports</option>
-                <option value="/videos/">Video</option>
-                <option value="/blog/">Blog</option>
-            </select>-->
         </div><!-- .l-contained -->
     </nav><!-- .l-primarynav -->
 

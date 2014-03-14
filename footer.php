@@ -17,7 +17,7 @@
                 <li><a href="/features/">Features</a></li>
                 <li><a href="/sports/">Sports</a></li>
                 <li><a href="/video/">Video</a></li>
-                <li><a href="/theblog/">Blog</a></li>
+                <li><a href="/blog/">Blog</a></li>
             </ul>
         </nav>
         <nav class="link-farm clearfix">
@@ -45,7 +45,7 @@
             <?php get_search_form(); ?>
         </div>
         <div class="dingbat"><a href="/" class="dingbat-text">U</a></div>
-        <div class="copyright">Copyright The Ubyssey 2013 - Site by <a href="http://rileytomasek.com">Riley Tomasek</a></div>
+        <div class="copyright">Copyright The Ubyssey 2014</div>
     </footer><!-- .l-primaryfooter -->
 
 </div><!-- #page -->
