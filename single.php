@@ -24,7 +24,11 @@ get_header(); ?>
             <ul>
                 <?php
                     // Get the 3 most recent articles of the same post type
-                    $args = array( 'posts_per_page' => '3', 'post_type' => get_post_type( $post->ID ) );
+                    $args = array(
+                        'posts_per_page' => '3',
+                        'post_type' => get_post_type($post->ID),
+                        'post__not_in' => array(get_the_ID()),
+                    );
                     // The Query
                     $the_query = new WP_Query( $args );
                     // The Loop
