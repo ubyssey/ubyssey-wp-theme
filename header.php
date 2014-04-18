@@ -28,56 +28,6 @@
 
     <!-- jQuery loaded here just so that I can write inline for dev @TODO: fix all scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-
-    <!-- fitvid - responsive videos -->
-    <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.fitvids-ck.js"></script>
-    <script>
-        $(document).ready(function(){
-        // Target your .container, .wrapper, .post, etc.
-        $(".video").fitVids();
-        });
-    </script>
-
-    <!-- to make select nav work -->
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $("select.show-mobile").bind( "change", function(event, ui) {
-            window.location = $(this).find("option:selected").val();
-        });
-    });
-    </script>
-
-    <!-- to make popular widget tabs work -->
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $(".popular-tab-toggle").click( function(e) {
-            e.preventDefault();
-            $('.popular-tab-toggle h2').toggleClass('active');
-            $('.popular ul').toggleClass('active');
-        });
-        $(".headline-hover").mouseover( function() {
-            $(".slide").attr( 'style', 'z-index: 1;');
-            $(".headline").removeClass('active');
-            $(this).parent().addClass('active');
-            $("#slide-" + $(this).attr('ID')).attr( 'style', 'z-index: 2;');
-        });
-    });
-    $( document ).ready(function() {
-        var windowWidth = $(window).width();
-        var sliderHeight = 0;
-        var slider = $(".featured-slider");
-        if ( windowWidth > 1099 ) { sliderHeight = 328; }
-        if ( windowWidth < 1100 && windowWidth > 850) { sliderHeight = windowWidth * .297702298; }
-        if ( windowWidth < 851 ) { sliderHeight = windowWidth * .490543735; }
-        slider.height( sliderHeight );
-        $(".headlines").show();
-        $(window).resize(function() {
-            sliderHeight = $("#slide-1").height();
-            slider.height( sliderHeight );
-        });
-    });
-    </script>
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -95,6 +45,9 @@
 
     <script type="text/javascript" src="//use.typekit.net/qex0fvk.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+    <!-- fitvid - responsive videos -->
+    <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.fitvids-ck.js"></script>
 </head>
 
 <body <?php body_class(); ?>>

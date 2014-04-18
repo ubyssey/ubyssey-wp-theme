@@ -50,6 +50,9 @@
 
 </div><!-- #page -->
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/scripts.js"></script>
+
 <?php wp_footer(); ?>
 
 </body>

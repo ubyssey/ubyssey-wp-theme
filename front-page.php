@@ -505,21 +505,6 @@ get_header(); ?>
                         ?>
                     </section>
                     <nav class="section-feed sports">
-
-                        <script type="text/javascript">
-                            $(document).ready(function() {
-                                $(".section-feed .tab").hide();
-                                $(".section-feed .base").show();
-                                $(".tags a").click(function(e) {
-                                    var theSection = $(this).parent().parent().attr("class");
-                                    $("." + theSection + " .tab").hide();
-                                    var theClass = $(this).attr("class");
-                                    $(".section-feed ." + theClass).fadeIn(300);
-                                    e.preventDefault();
-                                });
-                            });
-                        </script>
-
                         <ul class="tab base">
                             <?php
                                 // Current sports feature (to remove from query)

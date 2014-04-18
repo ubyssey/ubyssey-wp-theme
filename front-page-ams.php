@@ -9,7 +9,7 @@ get_header(); ?>
 
 		<div class="l-main">
 			<?php get_template_part( 'content', 'featured-slider' ); ?>
-			
+
 			<!-- AMS FEATURE BOX -->
 			<div class="feature-box ams" id="ams-elections-box">
 				<header class="clearfix">
@@ -19,7 +19,7 @@ get_header(); ?>
 					<section class="featured">
 						<?php
 							// Get most recent news, opinion or features articles with the ams-elections category
-							$args = array( 
+							$args = array(
 								'post_type' => array('news', 'opinion', 'features'),
 								'posts_per_page' => '1',
 								'tax_query' => array(
@@ -61,7 +61,7 @@ get_header(); ?>
 								// Get the 4 most recent news articles (excluding most recent feature)
 								$to_exclude = array( $to_exclude->post->ID );
 								// Get all news, opinion or features articles with the ams-elections category, minus first
-								$args2 = array( 
+								$args2 = array(
 									'post_type' => array('news', 'opinion', 'features'),
 									'post__not_in' => $to_exclude,
 									'posts_per_page' => '4',
@@ -94,7 +94,7 @@ get_header(); ?>
 								wp_reset_postdata();
 							?>
 						</ul>
-										
+
 					</nav>
 				</div><!-- .content -->
 			</div><!-- AMS .feature-box -->
@@ -337,7 +337,7 @@ get_header(); ?>
 					</nav>
 				</div><!-- .content -->
 			</div><!-- opinion .feature-box -->
-			
+
 			<!-- NEWS FEATURE BOX -->
 			<div class="feature-box news">
 				<header class="clearfix">
@@ -444,7 +444,7 @@ get_header(); ?>
 								wp_reset_postdata();
 							?>
 						</ul>
-										
+
 					</nav>
 				</div><!-- .content -->
 			</div><!-- NEWS .feature-box -->
@@ -588,21 +588,6 @@ get_header(); ?>
 						?>
 					</section>
 					<nav class="section-feed sports">
-
-						<script type="text/javascript">
-							$(document).ready(function() {
-								$(".section-feed .tab").hide();
-								$(".section-feed .base").show();
-								$(".tags a").click(function(e) {
-									var theSection = $(this).parent().parent().attr("class");
-									$("." + theSection + " .tab").hide();
-									var theClass = $(this).attr("class");
-									$(".section-feed ." + theClass).fadeIn(300);
-									e.preventDefault();
-								});
- 							});
-						</script>
-
 						<ul class="tab base">
 							<?php
 								// Current sports feature (to remove from query)
@@ -678,7 +663,7 @@ get_header(); ?>
 								// Reset Post Data
 								wp_reset_postdata();
 							?>
-						</ul>					
+						</ul>
 					</nav>
 				</div><!-- .content -->
 			</div><!-- SPORTS .feature-box -->
@@ -725,7 +710,7 @@ get_header(); ?>
 								// Reset Post Data
 								wp_reset_postdata();
 							?>
-						</ul>		
+						</ul>
 					</nav>
 				</div><!-- .content -->
 			</div><!-- video .feature-box -->
