@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="l-secondary hide-mobile">
+<div class="l-secondary">
     <?php
     if ( is_post_type_archive( 'news' ) ){
         if (!function_exists('dynamic_sidebar') || !dynamic_sidebar( 'News Sidebar')) { }

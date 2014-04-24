@@ -39,9 +39,12 @@ get_header(); ?>
                 ?>
             </ul>
         </div><!-- .small-feed -->
-
-        <?php comments_template(); ?>
     </div><!-- .l-main -->
 
 <?php get_sidebar(); ?>
+
+<div class="l-main comments">
+    <?php comments_template(); ?>
+</div>
+
 <?php get_footer(); ?>

@@ -154,7 +154,6 @@ function ub_content_nav( $nav_id ) {
 
 // Custom Captions
 add_filter( 'img_caption_shortcode', 'cleaner_caption', 10, 3 );
-
 function cleaner_caption( $output, $attr, $content ) {
     /* We're not worried abut captions in feeds, so just return the output here. */
     if ( is_feed() )
@@ -203,24 +202,23 @@ function get_time_since_posted() {
 }
 
 // Removes the visual editor for everyone
-//add_filter ( 'user_can_richedit' , create_function ( '$a' , 'return false;' ) , 50 );
 add_filter( 'user_can_richedit' , '__return_false', 50 );
 
 // custom admin login logo
+add_action('login_head', 'custom_login_logo');
 function custom_login_logo() {
     echo '<style type="text/css">
     h1 a { background-image: url('.get_bloginfo('template_directory').'/images/UbysseySealLogo.png) !important; background-size: 300px 300px !important; width: 315px !important; height: 300px !important; }
     </style>';
 }
-add_action('login_head', 'custom_login_logo');
 
 // Add custom post types to RSS feed
+add_filter('request', 'modified_feed_request');
 function modified_feed_request($qv) {
     if (isset($qv['feed']) && !isset($qv['post_type']))
         $qv['post_type'] = array( 'post', 'news', 'culture', 'opinion', 'features', 'sports', 'video' );
     return $qv;
 }
-add_filter('request', 'modified_feed_request');
 
 // Get date outsite loop, modified to be PST not UTC
 function ub_pst_time() {
@@ -239,12 +237,11 @@ function ub_pst_time() {
 }
 
 // Make Authors archives check all of the custom posts
-function custom_post_author_archive( &$query )
-{
+add_action( 'pre_get_posts', 'custom_post_author_archive' );
+function custom_post_author_archive( &$query ) {
     if ( $query->is_author ) {
       $query->set( 'post_type', array('news', 'ams', 'culture', 'features', 'opinion', 'sports', 'photo', 'video', 'post') );
     }
 
     remove_action( 'pre_get_posts', 'custom_post_author_archive' ); // run once!
 }
-add_action( 'pre_get_posts', 'custom_post_author_archive' );

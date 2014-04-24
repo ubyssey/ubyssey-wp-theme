@@ -2471,6 +2471,9 @@ h1 a span.ams-elections-header.dingbat {
 .hide-tablet {
   display: none;
 }
+.l-widget {
+    display: none;
+}
 /* Hide all mobile specific elements and show larger elements */
 @media only screen and (min-width: 500px) {
   .show-mobile {
@@ -2484,6 +2487,9 @@ h1 a span.ams-elections-header.dingbat {
   }
   .hide-non-mobile {
     display: none;
+  }
+  .l-widget {
+    display: block;
   }
 }
 /* Show elements hidden from tablet layout */
@@ -2801,6 +2807,7 @@ img.resp,
 }
 .adsanity-group {
     border: 1px solid #CCCCCC;
+    display: inherit;
 }
 .advertisement > .adsanity-group {
     border: none;
