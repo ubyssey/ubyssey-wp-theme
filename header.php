@@ -48,6 +48,7 @@
     <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
     <!-- fitvid - responsive videos -->
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.fitvids-ck.js"></script>
+    <script src="<?php bloginfo( 'template_url' ); ?>/js/dfp.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
