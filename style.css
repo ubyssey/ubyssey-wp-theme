@@ -3005,17 +3005,87 @@ img.resp,
     width: 49%;
 }
 
+
+/* =========================================================
+   Full width story styles
+   ========================================================= */
+
+.l-fullwidth-story .fw_headers {
+    width: 55%;
+    margin: 0 auto;
+}
+
+.l-fullwidth-story.single {
+    margin-top: 40px;
+}
+.l-fullwidth-story.date {
+    color: #535353;
+    font-family: 'adelle', sans-serif;
+}
+.l-fullwidth-story h1 {
+    text-transform: uppercase;
+    font-family: 'adelle', sans-serif;
+    font-style: oblique;
+    font-size: 55px;
+    margin: 5px 0;
+    line-height: 1;
+}
+.l-fullwidth-story.snippet {
+    margin: 5px 0;
+    padding: 0;
+    color: #535353;
+    font-family: 'adelle', sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+}
+.l-fullwidth-story.author {
+    font-size: 24px;
+    font-weight: 700;
+}
+.l-fullwidth-story.entry-content {
+    margin-top: 20px;
+}
+.l-fullwidth-story > p {
+    margin: 0 auto 25px auto;
+    width: 55%;
+    line-height: 1.75em;
+    padding: 0;
+}
+.l-fullwidth-story .fw_dropcap{
+    font-size: 5.5em;
+    line-height: 0.75em;
+    padding: 10px 10px 0 0;
+}
+
+.l-fullwidth-story img {
+    width: 100%;
+}
+.l-fullwidth-story .wp-caption-text {
+    background: none;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.25;
+    position: relative;
+    width: 55%;
+    margin: 0 auto 25px auto;
+}
+
+.l-fullwidth-story .fw_one_image {
+    margin-bottom: 25px;
+}
+
+
 /* Mobile */
 @media only screen and (max-width: 500px) {
-    .l-fullwidth h1 {
+    .l-fullwidth h1, .l-fullwidth-story h1 {
         padding-left: 0;
         padding-right: 0;
         font-size: 35px;
     }
-    .l-fullwidth.author {
+    .l-fullwidth.author, .l-fullwidth-story.author  {
         font-size: 20px;
     }
-    .l-fullwidth .wp-caption-text {
+    .l-fullwidth .wp-caption-text, .l-fullwidth-story .wp-caption-text {
         margin-right: 0;
         margin-left: 0;
         width: auto;
@@ -3027,7 +3097,7 @@ img.resp,
 
 /* Tablet */
 @media only screen and (min-width: 501px) and (max-width: 850px) {
-    .l-fullwidth .wp-caption-text {
+    .l-fullwidth .wp-caption-text, .l-fullwidth-story .wp-caption-text {
         margin-right: 5%;
         margin-top: -3%;
         width: 70%;
@@ -3047,7 +3117,7 @@ img.resp,
         border: none;
         float: left;
     }
-    .l-fullwidth > p {
+    .l-fullwidth > p, .l-fullwidth-story > p {
         padding: 0;
         margin-left: 1%;
         width: 98%;
@@ -3056,8 +3126,8 @@ img.resp,
 
 /* Desktop */
 @media only screen and (min-width: 851px) {
-    .l-fullwidth.snippet {
-        width: 70%;
+    .l-fullwidth.snippet, .l-fullwidth-story.snippet {
+        width: 100%;
     }
 }
 
