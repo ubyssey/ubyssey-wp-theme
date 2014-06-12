@@ -3010,15 +3010,27 @@ img.resp,
    Full width story styles
    ========================================================= */
 
-.l-fullwidth-story .fw_headers {
-    width: 55%;
+.l-fullwidth-story .fw_headers, .l-fullwidth-story > p, .l-fullwidth-story .wp-caption-text {
+    /* width: 55%; */
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.l-fullwidth-story.l-main {
+    float: none;
     margin: 0 auto;
+}
+
+.l-fullwidth-story .fw_headers {
+    text-align: center;
 }
 
 .l-fullwidth-story.single {
     margin-top: 40px;
 }
 .l-fullwidth-story.date {
+    text-align: center;
     color: #535353;
     font-family: 'adelle', sans-serif;
 }
@@ -3026,12 +3038,12 @@ img.resp,
     text-transform: uppercase;
     font-family: 'adelle', sans-serif;
     font-style: oblique;
-    font-size: 55px;
-    margin: 5px 0;
+    font-size: 45px;
+    margin: 10px 0;
     line-height: 1;
 }
 .l-fullwidth-story.snippet {
-    margin: 5px 0;
+    margin: 10px 0;
     padding: 0;
     color: #535353;
     font-family: 'adelle', sans-serif;
@@ -3046,8 +3058,7 @@ img.resp,
     margin-top: 20px;
 }
 .l-fullwidth-story > p {
-    margin: 0 auto 25px auto;
-    width: 55%;
+    margin-bottom: 25px;
     line-height: 1.75em;
     padding: 0;
 }
@@ -3060,14 +3071,14 @@ img.resp,
 .l-fullwidth-story img {
     width: 100%;
 }
+
 .l-fullwidth-story .wp-caption-text {
     background: none;
     font-family: Helvetica, sans-serif;
     font-size: 14px;
     line-height: 1.25;
     position: relative;
-    width: 55%;
-    margin: 0 auto 25px auto;
+    margin-bottom: 25px;
 }
 
 .l-fullwidth-story .fw_one_image {
@@ -3093,19 +3104,33 @@ img.resp,
     .fw_quote {
         font-size: 24px;
     }
+    .l-fullwidth-story .wp-caption-text {
+        width: 100%;
+    }
+
+    .fw_pano img{
+      width: auto;
+      margin-left: -50%;
+      max-width: none;
+      height: 140px;
+    }
 }
 
 /* Tablet */
 @media only screen and (min-width: 501px) and (max-width: 850px) {
-    .l-fullwidth .wp-caption-text, .l-fullwidth-story .wp-caption-text {
+    .l-fullwidth .wp-caption-text {
         margin-right: 5%;
         margin-top: -3%;
         width: 70%;
     }
+
 }
 
 /* Tablet & Smaller */
 @media only screen and (max-width: 850px) {
+    .l-fullwidth-story .fw_headers {
+        text-align: left;
+    }
     .fw_center {
         margin-left: 0;
         margin-right: 0;
@@ -3117,10 +3142,13 @@ img.resp,
         border: none;
         float: left;
     }
-    .l-fullwidth > p, .l-fullwidth-story > p {
+    .l-fullwidth > p {
         padding: 0;
         margin-left: 1%;
         width: 98%;
+    }
+    .l-fullwidth-story > p, .l-fullwidth-story .fw_headers {
+        width: 92%;
     }
 }
 

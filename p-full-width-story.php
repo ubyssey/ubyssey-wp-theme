@@ -14,8 +14,7 @@ get_header(); ?>
             <div class="fw_headers clearfix">
                 <span class="l-fullwidth-story date"><?php the_time('F j, Y, g:ia T'); ?></span>
                 <h1 class="l-fullwidth-story title"><?php the_title(); ?></h1>
-                <p class="l-fullwidth-story snippet">When faced with the prospect of a sunny weekend, the safe choice would be hanging out at Kits Beach again. But if you’re up for a challenge, why not go wild and climb Black Tusk? 
-<?php echo get_post_meta(get_the_ID(), 'snippet', true); ?></p>
+                <p class="l-fullwidth-story snippet"><?php echo get_post_meta(get_the_ID(), 'snippet', true); ?></p>
                 <span class="l-fullwidth-story author"><span class="blue-green">&#9658;</span> By <?php the_author(); ?></a></span>
             </div>
 
@@ -26,7 +25,7 @@ get_header(); ?>
     </div>
 </div>
 <div class="l-content l-contained clearfix">
-    <div class="l-main single">
+    <div class="l-fullwidth-story l-main single">
         <?php get_template_part( 'share', 'single-bottom' ); ?>
 
         <div class="small-feed">
