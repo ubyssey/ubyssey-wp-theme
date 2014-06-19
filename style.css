@@ -3010,11 +3010,25 @@ img.resp,
    Full width story styles
    ========================================================= */
 
-.l-fullwidth-story .fw_headers, .l-fullwidth-story > p, .l-fullwidth-story .wp-caption-text {
+.l-fullwidth-story .fw_headers, .l-fullwidth-story > p, .l-fullwidth-story .wp-caption-text, .l-fullwidth-story .fw-wrap {
     /* width: 55%; */
     width: 750px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.l-fullwidth-story .fw-wrap .fw-wrap-image {
+    width: 50%;
+}
+
+.l-fullwidth-story .fw-wrap p {
+    padding: 0;
+    line-height: 1.75em;
+}
+
+.l-fullwidth-story .fw-wrap .fw-wrap-image .wp-caption-text {
+    width: 100%;
+    padding: 15px 0;
 }
 
 .l-fullwidth-story.l-main {
@@ -3081,6 +3095,10 @@ img.resp,
     margin-bottom: 25px;
 }
 
+.fw_one_image .wp-caption-text {
+    margin-bottom: 0;
+}
+
 .l-fullwidth-story .fw_one_image {
     margin-bottom: 25px;
 }
@@ -3108,11 +3126,16 @@ img.resp,
         width: 100%;
     }
 
+    .fw_pano {
+        width: 100%;
+        overflow: hidden;
+    }
+
     .fw_pano img{
-      width: auto;
-      margin-left: -50%;
-      max-width: none;
-      height: 140px;
+        width: auto;
+        margin-left: -50%;
+        max-width: none;
+        height: 140px;
     }
 }
 
@@ -3147,8 +3170,27 @@ img.resp,
         margin-left: 1%;
         width: 98%;
     }
-    .l-fullwidth-story > p, .l-fullwidth-story .fw_headers {
+
+    .l-fullwidth-story .fw-wrap {
+      width: 100%;
+
+    }
+
+    .l-fullwidth-story > p, .l-fullwidth-story .fw_headers, .fw-wrap p {
         width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .fw-wrap-image.left, .fw-wrap-image.right {
+        float: none;
+    }
+
+    .l-fullwidth-story .fw-wrap .fw-wrap-image {
+        width: 100%;
+    }
+
+    .l-fullwidth-story .fw-wrap .fw-wrap-image .wp-caption-text {
+        padding: 15px 0 15px 10px;
     }
 }
 
@@ -3156,6 +3198,15 @@ img.resp,
 @media only screen and (min-width: 851px) {
     .l-fullwidth.snippet, .l-fullwidth-story.snippet {
         width: 100%;
+    }
+    .l-fullwidth-story .fw-wrap .fw-wrap-image.left {
+        float: left;
+        padding-right: 25px;
+    }
+
+    .l-fullwidth-story .fw-wrap .fw-wrap-image.right {
+        float: right;
+        padding-left: 25px;
     }
 }
 
