@@ -19,6 +19,15 @@ get_header(); ?>
 
         <?php get_template_part( 'share', 'single-bottom' ); ?>
 
+        <div class="mobile-footer">
+            <!-- Mobile_Box_300x250 -->
+            <div class='adslot' data-dfp='Mobile_Box_300x250' id='div-gpt-ad-1409604038885-30' style='width:300px; height:250px;'>
+            <script type='text/javascript'>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409604038885-30'); });
+            </script>
+            </div>                        
+        </div>
+
         <div class="small-feed">
             <h3>You may also like:</h3>
             <ul>

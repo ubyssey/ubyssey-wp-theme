@@ -1,15 +1,28 @@
 <?php
-/*
+/**
+ * Template Name: Blog
+ *
  * The section front for the blog post type.
  *
  */
 get_header(); ?>
-        <div class="blog-masthead">
-            <h1 class="blog-title">Welcome to the Social Club</h1>
-            <span class="blog-description">How we really feel about what's happening at UBC, and other idle gossip</span>
-            <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
-        </div>
 
+    <div class="blog-masthead">
+        <h1 class="blog-title">Welcome to the Social Club</h1>
+        <span class="blog-description">How we really feel about what's happening at UBC, and other idle gossip</span>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
+    </div>
+    <div class="blog-banner">
+        <img src="<?php bloginfo( 'template_url' ); ?>/images/blog-header.jpg" alt="Vancouver in the Summer" />
+        <div class="blog-banner-nav">
+            <ul>
+                <li><a href="http://ubyssey.ca/blog/vancouver-summer-july-events-352/">July Events</a></li>
+                <li><a href="http://ubyssey.ca/blog/vancouver-summer-music-235/">Music</a></li>
+                <li><a href="http://ubyssey.ca/blog/vancouver-summer-beaches-385/">Beaches</a></li>
+                <li><a href="http://ubyssey.ca/blog/vancouver-summer-markets-235">Markets</a></li>
+            </ul>
+        </div>
+    </div>
     <div id="blog">
         <?php function get_post_type_taxonomies($id, $type, $tax = 'category') {
             $out = array();

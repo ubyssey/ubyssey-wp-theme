@@ -41,52 +41,20 @@
         
     </script>
 
-    <script type='text/javascript'>
-    //     var googletag = googletag || {};
-    //     googletag.cmd = googletag.cmd || [];
-    //     (function() {
-    //     var gads = document.createElement('script');
-    //     gads.async = true;
-    //     gads.type = 'text/javascript';
-    //     var useSSL = 'https:' == document.location.protocol;
-    //     gads.src = (useSSL ? 'https:' : 'http:') + 
-    //     '//www.googletagservices.com/tag/js/gpt.js';
-    //     var node = document.getElementsByTagName('script')[0];
-    //     node.parentNode.insertBefore(gads, node);
-    //     })();
-    </script>
-
-    <script type='text/javascript'>
-    //     googletag.cmd.push(function() {
-    //     googletag.defineSlot('/61222807/News_BoxA_300x250', [300, 250], 'div-gpt-ad-1400542176207-8').addService(googletag.pubads());
-    //     googletag.defineSlot('/61222807/News_BoxB_300x250', [300, 250], 'div-gpt-ad-1400542176207-9').addService(googletag.pubads());
-    //     googletag.defineSlot('/61222807/News_Inline_468x60', [468, 60], 'div-gpt-ad-1401420814378-10').addService(googletag.pubads());
-    //     googletag.defineSlot('/61222807/News_leaderboard_728x90', [728, 90], 'div-gpt-ad-1400542176207-11').addService(googletag.pubads());
-    //     //googletag.pubads().enableSingleRequest();
-    //     googletag.enableServices();
-    //     });
-    </script>
-
     <script>
-    // (function() {
-    // var useSSL = 'https:' == document.location.protocol;
-    // var src = (useSSL ? 'https:' : 'http:') +
-    // '//www.googletagservices.com/tag/js/gpt.js';
-    // document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
-    // })();
-
-    var googletag = googletag || {};
-    googletag.cmd = googletag.cmd || [];
-    (function() {
-    var gads = document.createElement('script');
-    gads.async = true;
-    gads.type = 'text/javascript';
-    var useSSL = 'https:' == document.location.protocol;
-    gads.src = (useSSL ? 'https:' : 'http:') +
-    '//www.googletagservices.com/tag/js/gpt.js';
-    var node = document.getElementsByTagName('script')[0];
-    node.parentNode.insertBefore(gads, node);
-    })();
+        // Initialize DFP 
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+        })();
     </script>
 
     <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/dfp.js"></script>
@@ -116,11 +84,6 @@
         <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar( 'Header Sidebar')) : ?>
         <?php endif; ?>
     </div><!-- .l-topad -->
-    <div class="l-topad-mobile l-contained advertisement hide-desktop">
-        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar( 'Mobile Header Sidebar')) : ?>
-        <?php endif; ?>
-    </div><!-- .l-topad -->
-
     <header class="l-masthead">
         <div class="l-contained clearfix">
             <div class="l-leftheader hide-tablet">
@@ -162,6 +125,11 @@
             </div>
         </div><!-- .l-contained -->
     </header><!-- .l-masthead -->
+
+    <div class="l-topad-mobile l-contained advertisement hide-desktop mobile-header">
+        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar( 'Mobile Header Sidebar')) : ?>
+        <?php endif; ?>
+    </div><!-- .l-topad -->
 
     <nav class="l-primarynav hide-mobile">
         <div class="l-contained">

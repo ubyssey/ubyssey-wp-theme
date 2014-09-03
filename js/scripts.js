@@ -4,6 +4,15 @@ $(document).ready(function() {
     window.location = $(this).find("option:selected").val();
   });
 
+  // continue reading for mobile ads
+  $('.continue-reading a').click(function(e){
+    e.preventDefault();
+    var block = $(this).parent().parent();
+    var cur_pos = block.offset().top;  // current y position on the page
+    var offset = block.height();
+    $("html, body").animate({ scrollTop: cur_pos+offset });
+  });
+
   // to make front page tab switching work
   $(".section-feed .tab").hide();
   $(".section-feed .base").show();
