@@ -134,14 +134,14 @@
     <nav class="l-primarynav hide-mobile">
         <div class="l-contained">
             <ul class="hide-mobile">
-                <li><a href="/news/" class="<?php if( is_post_type_archive( 'news' ) || 'news' == get_post_type() ){ echo 'active'; }?>">News</a></li>
-                <li><a href="/ams/" class="<?php if( is_post_type_archive( 'ams' ) || 'ams' == get_post_type() ){ echo 'active'; }?>">AMS</a></li>
-                <li><a href="/culture/" class="<?php if( is_post_type_archive( 'culture' ) || 'culture' == get_post_type() ){ echo 'active'; }?>">Culture</a></li>
-                <li><a href="/opinion/" class="<?php if( is_post_type_archive( 'opinion' ) || 'opinion' == get_post_type() ){ echo 'active'; }?>">Opinion</a></li>
-                <li><a href="/features/" class="<?php if( is_post_type_archive( 'features' ) || 'features' == get_post_type() ){ echo 'active'; }?>">Features</a></li>
-                <li><a href="/sports/" class="<?php if( is_post_type_archive( 'sports' ) || 'sports' == get_post_type() ){ echo 'active'; }?>">Sports</a></li>
-                <li><a href="/videos/" class="<?php if( is_post_type_archive( 'videos' ) || 'videos' == get_post_type() ){ echo 'active'; }?>">Video</a></li>
-                <li><a href="/blog/" class="<?php if( is_post_type_archive( 'blog' ) || 'blog' == get_post_type() ){ echo 'active'; }?>">Blog</a></li>
+                <li><a href="/news" class="<?php if( is_post_type_archive( 'news' ) || 'news' == get_post_type() ){ echo 'active'; }?>">News</a></li>
+                <li><a href="/ams" class="<?php if( is_post_type_archive( 'ams' ) || 'ams' == get_post_type() ){ echo 'active'; }?>">AMS</a></li>
+                <li><a href="/culture" class="<?php if( is_post_type_archive( 'culture' ) || 'culture' == get_post_type() ){ echo 'active'; }?>">Culture</a></li>
+                <li><a href="/opinion" class="<?php if( is_post_type_archive( 'opinion' ) || 'opinion' == get_post_type() ){ echo 'active'; }?>">Opinion</a></li>
+                <li><a href="/features" class="<?php if( is_post_type_archive( 'features' ) || 'features' == get_post_type() ){ echo 'active'; }?>">Features</a></li>
+                <li><a href="/sports" class="<?php if( is_post_type_archive( 'sports' ) || 'sports' == get_post_type() ){ echo 'active'; }?>">Sports</a></li>
+                <li><a href="/videos" class="<?php if( is_post_type_archive( 'videos' ) || 'videos' == get_post_type() ){ echo 'active'; }?>">Video</a></li>
+                <li><a href="/blog" class="<?php if( is_post_type_archive( 'blog' ) || 'blog' == get_post_type() ){ echo 'active'; }?>">Blog</a></li>
             </ul>
         </div><!-- .l-contained -->
     </nav><!-- .l-primarynav -->

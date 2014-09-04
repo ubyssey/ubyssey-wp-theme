@@ -444,6 +444,9 @@ small {
   margin: 0 auto;
   display: block;
 }
+.l-topad-mobile {
+  padding-bottom: 5px;
+}
 .l-topad-mobile img {
   margin: 0 auto;
   display: block;
@@ -581,7 +584,7 @@ h1 a {
 h1 a span.dingbat {
   color: #0071c9;
   font-family: AgincourtRegular, serif;
-  font-size: 83px;
+  font-size: 45px;
   height: 70px;
   line-height: 70px;
   vertical-align: middle;
@@ -599,7 +602,7 @@ h1 a span.dingbat {
 h1 a span.minion {
   color: #3f3f3f;
   font-family: MinionProBold, serif;
-  font-size: 40px;
+  font-size: 30px;
   letter-spacing: -0.05em;
   height: 70px;
   line-height: 70px;
