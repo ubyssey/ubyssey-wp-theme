@@ -1,0 +1,258 @@
+{
+	"before": [
+		{ 
+			"name": "SFU",
+			"dorm":	692.00,
+			"apartment": 644.00,
+			"suite": 787.00,
+			"percent":	6.00
+		},
+		{
+			"name": "UBC",	
+			"dorm": 604.13,
+			"apartment": 747.88,
+			"suite": 983.96,
+			"percent": 20.00
+		},
+		{
+			"name": "Victoria",
+			"dorm":	525.00,
+			"apartment": 608.62,
+			"suite": 611.13,
+			"percent": 17
+		},
+		{
+			"name": "Alberta",
+			"dorm":	609.25,
+			"apartment": 783.00,
+			"suite": 859.00,
+			"percent":	14.00
+		},
+		{
+			"name": "Calgary",
+			"dorm":	691.88,
+			"apartment": 755.63,
+			"suite": 884.38,
+			"percent": 9.00
+		},
+		{
+			"name": "Saskatchewan",
+			"dorm": 443.75,
+			"apartment": 652.00,
+			"suite": 950.00,
+			"percent": 12.90
+		},
+		{
+			"name": "Regina",
+			"dorm":	661.50,
+			"apartment": 603.50,
+			"suite": 936.75,
+			"percent": 11.20
+		},
+		{
+			"name": "Manitoba",
+			"dorm": 578.00,
+			"apartment": 828.75,
+			"suite": false,
+			"percent": 5.4
+		},
+		{
+			"name": "Toronto",
+			"dorm":	932.13,
+			"apartment": 1047.94,
+			"suite": false,
+			"percent": 18.9
+		},
+		{
+			"name": "Ottawa",
+			"dorm": 689.75,
+			"apartment": 756.00,
+			"suite": false,
+			"percent": 8.8
+		},
+		{
+			"name": "McMaster",
+			"dorm":	816.25,
+			"apartment": 938.13,
+			"suite": 1004.38,
+			"percent": 17.40
+		},
+		{
+			"name": "Waterloo",
+			"dorm": 719.88,
+			"apartment": 859.38,
+			"suite": false,
+			"percent": 15.6
+		},
+		{
+			"name": "Western",
+			"dorm": 867.50,
+			"apartment": 1033.75,
+			"suite": false,
+			"percent": 23
+		},
+		{
+			"name": "McGill",
+			"dorm": 1078.00,
+			"apartment": 1013.00,
+			"suite": 1167.00,
+			"percent": 13
+		},
+		{
+			"name": "Concordia",
+			"dorm":	613.00,
+			"apartment": false,
+			"suite": 831.74,
+			"percent": 3.5
+		},
+		{
+			"name": "Laval",
+			"dorm":	322.00,
+			"apartment": false,
+			"suite": false,
+			"percent": 7.9
+		},
+		{
+			"name": "UNB",
+			"dorm":	726.38,
+			"apartment": 699.00,
+			"suite": 902.25,
+			"percent": false
+		},
+		{
+			"name": "Dalhousie",	
+			"dorm": 863.00,
+			"apartment": 878.13,
+			"suite": 1050.63,
+			"percent":	17.00
+		}
+	],
+	"after": [
+		{ 
+			"name": "SFU",
+			"dorm":	692.00,
+			"apartment": 644.00,
+			"suite": 787.00,
+			"percent":	6.00
+		},
+		{
+			"name": "UBC",	
+			"dorm": 724.956,
+			"apartment": 897.456,
+			"suite": 1180.752,
+			"percent": 20.00
+		},
+		{
+			"name": "Victoria",
+			"dorm":	525.00,
+			"apartment": 608.62,
+			"suite": 611.13,
+			"percent": 17
+		},
+		{
+			"name": "Alberta",
+			"dorm":	609.25,
+			"apartment": 783.00,
+			"suite": 859.00,
+			"percent":	14.00
+		},
+		{
+			"name": "Calgary",
+			"dorm":	691.88,
+			"apartment": 755.63,
+			"suite": 884.38,
+			"percent": 9.00
+		},
+		{
+			"name": "Saskatchewan",
+			"dorm": 443.75,
+			"apartment": 652.00,
+			"suite": 950.00,
+			"percent": 12.90
+		},
+		{
+			"name": "Regina",
+			"dorm":	661.50,
+			"apartment": 603.50,
+			"suite": 936.75,
+			"percent": 11.20
+		},
+		{
+			"name": "Manitoba",
+			"dorm": 578.00,
+			"apartment": 828.75,
+			"suite": false,
+			"percent": 5.4
+		},
+		{
+			"name": "Toronto",
+			"dorm":	932.13,
+			"apartment": 1047.94,
+			"suite": false,
+			"percent": 18.9
+		},
+		{
+			"name": "Ottawa",
+			"dorm": 689.75,
+			"apartment": 756.00,
+			"suite": false,
+			"percent": 8.8
+		},
+		{
+			"name": "McMaster",
+			"dorm":	816.25,
+			"apartment": 938.13,
+			"suite": 1004.38,
+			"percent": 17.40
+		},
+		{
+			"name": "Waterloo",
+			"dorm": 719.88,
+			"apartment": 859.38,
+			"suite": false,
+			"percent": 15.6
+		},
+		{
+			"name": "Western",
+			"dorm": 867.50,
+			"apartment": 1033.75,
+			"suite": false,
+			"percent": 23
+		},
+		{
+			"name": "McGill",
+			"dorm": 1078.00,
+			"apartment": 1013.00,
+			"suite": 1167.00,
+			"percent": 13
+		},
+		{
+			"name": "Concordia",
+			"dorm":	613.00,
+			"apartment": false,
+			"suite": 831.74,
+			"percent": 3.5
+		},
+		{
+			"name": "Laval",
+			"dorm":	322.00,
+			"apartment": false,
+			"suite": false,
+			"percent": 7.9
+		},
+		{
+			"name": "UNB",
+			"dorm":	726.38,
+			"apartment": 699.00,
+			"suite": 902.25,
+			"percent": false
+		},
+		{
+			"name": "Dalhousie",	
+			"dorm": 863.00,
+			"apartment": 878.13,
+			"suite": 1050.63,
+			"percent":	17.00
+		}
+	]
+}

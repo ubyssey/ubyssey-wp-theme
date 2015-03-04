@@ -1,0 +1,1 @@
+<div id="faculty-gaps" class="snippet-con box right"><div class="inner"><h2>Female salaries by faculty</h2><span class="label center">This chart shows each faculty's average female salary as a percentage of its average male salary.</span><ul class="chart bar faculty-gaps"></ul></div></div>

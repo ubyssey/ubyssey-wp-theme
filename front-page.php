@@ -11,7 +11,7 @@ get_header(); ?>
             <!-- NEWS FEATURE BOX -->
             <div class="feature-box news">
                 <header class="clearfix">
-                    <h2><a href="/news/">News</a></h2>
+                    <h2><a href="/news">News</a></h2>
                     <nav class="tags hide-mobile">
                         <ul class="news">
                             <?php /* @TODO: Add javascript tabs for sections */ ?>
@@ -122,7 +122,7 @@ get_header(); ?>
             <!-- CULTURE FEATURE BOX -->
             <div class="feature-box culture">
                 <header class="clearfix">
-                    <h2><a href="/culture/">Culture</a></h2>
+                    <h2><a href="/culture">Culture</a></h2>
                     <nav class="tags hide-mobile">
                         <ul class="culture">
                             <li><a href="#" class="campus">Campus</a></li>
@@ -252,7 +252,7 @@ get_header(); ?>
             <!-- OPINION FEATURE BOX -->
             <div class="feature-box opinion">
                 <header class="clearfix">
-                    <h2><a href="/opinion/">Opinion</a></h2>
+                    <h2><a href="/opinion">Opinion</a></h2>
                     <nav class="tags hide-mobile">
                         <ul class="opinion">
                             <li><a href="#" class="editorials">Editorials</a></li>
@@ -361,7 +361,7 @@ get_header(); ?>
             <!-- FEATURES FEATURE BOX -->
             <div class="feature-box features">
                 <header class="clearfix">
-                    <h2><a href="/features/">Features</a></h2>
+                    <h2><a href="/features">Features</a></h2>
                     <nav class="tags hide-mobile">
                         <ul class="features">
                             <li><a href="#" class="profiles-2">Profiles</a></li>
@@ -470,7 +470,7 @@ get_header(); ?>
             <!-- SPORTS FEATURE BOX -->
             <div class="feature-box sports">
                 <header class="clearfix">
-                    <h2><a href="/sports/">Sports</a></h2>
+                    <h2><a href="/sports">Sports</a></h2>
                     <nav class="tags hide-mobile">
                         <ul class="sports">
                             <?php /* @TODO: Add javascript tabs for sections */ ?>
@@ -580,7 +580,7 @@ get_header(); ?>
             <!-- VIDEO FEATURE BOX -->
             <div class="feature-box video">
                 <header class="clearfix">
-                    <h2><a href="/videos/">Video</a></h2>
+                    <h2><a href="/videos">Video</a></h2>
                     <nav class="tags hide-mobile">
                     </nav>
                 </header>

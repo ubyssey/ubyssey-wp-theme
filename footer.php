@@ -23,7 +23,7 @@
         <nav class="link-farm clearfix">
             <ul class="contact">
                 <li class="hide-desktop"><h3>Links</h3></li>
-                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/contact-us/">Contact</a></li>
                 <li><a href="/advertise-with-us/">Advertise</a></li>
                 <li><a href="/volunteer/">Volunteer</a></li>
                 <li><a href="/staff/">Staff</a></li>

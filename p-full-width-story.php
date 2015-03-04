@@ -15,7 +15,9 @@ get_header(); ?>
                 <span class="l-fullwidth-story date"><?php the_time('F j, Y, g:ia T'); ?></span>
                 <h1 class="l-fullwidth-story title"><?php the_title(); ?></h1>
                 <p class="l-fullwidth-story snippet"><?php echo get_post_meta(get_the_ID(), 'snippet', true); ?></p>
+                <?php if(get_the_author() != 'test'): ?>
                 <span class="l-fullwidth-story author"><span class="blue-green">&#9658;</span> By <?php the_author(); ?></a></span>
+                <?php endif; ?>
             </div>
 
             <div class="l-fullwidth-story entry-content clearfix"><?php the_content(); ?></div>
@@ -27,7 +29,6 @@ get_header(); ?>
 <div class="l-content l-contained clearfix">
     <div class="l-fullwidth-story l-main single">
         <?php get_template_part( 'share', 'single-bottom' ); ?>
-
         <div class="small-feed">
             <h3>You may also like:</h3>
             <ul>

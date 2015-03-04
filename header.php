@@ -13,7 +13,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title><?php if(!is_home()){ wp_title( '|', true, 'right'); echo ' | '; } ?>The Ubyssey, UBC's official student newspaper</title>
 
@@ -28,6 +28,7 @@
 
     <!-- jQuery loaded here just so that I can write inline for dev @TODO: fix all scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
 
     <script type="text/javascript">
 
@@ -111,7 +112,7 @@
                         <li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
                         <li><a href="/about/">About</a></li>
                         <li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/contact-us/">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="search-form clearfix">
@@ -134,14 +135,14 @@
     <nav class="l-primarynav hide-mobile">
         <div class="l-contained">
             <ul class="hide-mobile">
-                <li><a href="/news" class="<?php if( is_post_type_archive( 'news' ) || 'news' == get_post_type() ){ echo 'active'; }?>">News</a></li>
-                <li><a href="/ams" class="<?php if( is_post_type_archive( 'ams' ) || 'ams' == get_post_type() ){ echo 'active'; }?>">AMS</a></li>
-                <li><a href="/culture" class="<?php if( is_post_type_archive( 'culture' ) || 'culture' == get_post_type() ){ echo 'active'; }?>">Culture</a></li>
-                <li><a href="/opinion" class="<?php if( is_post_type_archive( 'opinion' ) || 'opinion' == get_post_type() ){ echo 'active'; }?>">Opinion</a></li>
-                <li><a href="/features" class="<?php if( is_post_type_archive( 'features' ) || 'features' == get_post_type() ){ echo 'active'; }?>">Features</a></li>
-                <li><a href="/sports" class="<?php if( is_post_type_archive( 'sports' ) || 'sports' == get_post_type() ){ echo 'active'; }?>">Sports</a></li>
-                <li><a href="/videos" class="<?php if( is_post_type_archive( 'videos' ) || 'videos' == get_post_type() ){ echo 'active'; }?>">Video</a></li>
-                <li><a href="/blog" class="<?php if( is_post_type_archive( 'blog' ) || 'blog' == get_post_type() ){ echo 'active'; }?>">Blog</a></li>
+                <li><a href="/news/" class="<?php if( is_post_type_archive( 'news' ) || 'news' == get_post_type() ){ echo 'active'; }?>">News</a></li>
+                <li><a href="/culture/" class="<?php if( is_post_type_archive( 'culture' ) || 'culture' == get_post_type() ){ echo 'active'; }?>">Culture</a></li>
+                <li><a href="/opinion/" class="<?php if( is_post_type_archive( 'opinion' ) || 'opinion' == get_post_type() ){ echo 'active'; }?>">Opinion</a></li>
+                <li><a href="/features/" class="<?php if( is_post_type_archive( 'features' ) || 'features' == get_post_type() ){ echo 'active'; }?>">Features</a></li>
+                <li><a href="/data/" class="<?php if( is_post_type_archive( 'data' ) || 'data' == get_post_type() ){ echo 'active'; }?>">Data</a></li>
+                <li><a href="/sports/" class="<?php if( is_post_type_archive( 'sports' ) || 'sports' == get_post_type() ){ echo 'active'; }?>">Sports</a></li>
+                <li><a href="/videos/" class="<?php if( is_post_type_archive( 'videos' ) || 'videos' == get_post_type() ){ echo 'active'; }?>">Video</a></li>
+                <li><a href="/blog/" class="<?php if( is_post_type_archive( 'blog' ) || 'blog' == get_post_type() ){ echo 'active'; }?>">Blog</a></li>
             </ul>
         </div><!-- .l-contained -->
     </nav><!-- .l-primarynav -->

@@ -4,6 +4,16 @@ $(document).ready(function() {
     window.location = $(this).find("option:selected").val();
   });
 
+  if($('.full-height').is(':visible')){
+    var windowHeight = $(window).height();
+    $('.full-height').css('max-height', windowHeight);
+  }
+
+  if($('.cover').is(':visible')){
+    var windowHeight = $(window).height();
+    $('.cover').css('height', windowHeight - 40);
+  }
+  
   // continue reading for mobile ads
   $('.continue-reading a').click(function(e){
     e.preventDefault();
@@ -51,5 +61,5 @@ $(document).ready(function() {
 
   // fitvid - responsive videos
   // Target your .container, .wrapper, .post, etc.
-  $(".video").fitVids();
+  //$(".video").fitVids();
 });
