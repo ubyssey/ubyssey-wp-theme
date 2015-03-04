@@ -236,6 +236,7 @@ nav.l-primarynav li a {
   @media only screen and (min-width: 850px) {
     width: 12.5%;
     padding: 8px;
+    width: calc(100% / 8);
     // Hover CSS easing
     -webkit-transition-property: background;
     -moz-transition-property: background;
@@ -350,6 +351,12 @@ nav.l-primarynav li:nth-child(4) a {
       a:hover { color: @UB_Blue; }
     }
     li:last-child { border: none; }
+  }
+
+  &.news {
+    @media only screen and (min-width: 500px) {
+     border-top: 1px solid #CCCCCC;
+    }
   }
 
   .featured {
@@ -661,6 +668,12 @@ h1 {
   line-height: 1.5;
   margin: 0 0 25px 0; /* 1.6 * 16 */
   padding: 0 12px 0 10px;
+  .entry-content p a {
+    color: #0071c9;
+  }
+  .entry-content p a:hover {
+    text-decoration: underline;
+  }
   @media only screen and (min-width: 500px) {
     padding: 0 50px 0 12px;
   }
@@ -791,8 +804,7 @@ h1 {
 
 /* Small Feed */
 .small-feed {
-  border-top: 1px solid @Border_Gray;
-  border-bottom: 1px solid @Border_Gray;
+  border-bottom: 1px dotted @Border_Gray;
   padding-bottom: 25px;
   ul {
     margin: 0;
@@ -1441,6 +1453,336 @@ h1 a span.ams-elections-header.dingbat {
 //   transition: opacity .1s linear;
 // }
 
+/* === | BLOG | ======================================================================== */
+
+.blog-masthead {
+    margin: 32px 0;
+    text-align: center;
+}
+
+.blog-banner {
+    text-align: center;
+    max-width: 940px;
+    margin: 32px auto;
+    position: relative;
+    h1 {
+      font-size: 45px;
+      position: absolute;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      font-style: italic;
+    }
+    img {
+      width: 100%;
+    }
+}
+
+.blog-banner-nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    ul {
+      margin: 16px auto;
+      padding: 0;
+      list-style-type: none;
+      font-size: 18px;
+      li {
+        display: inline;
+        margin: 0 5px;
+        a:hover {
+        opacity: 0.75;
+        }
+      }
+    }
+}
+
+.blog-banner-nav.article ul {
+    margin: 10px auto;
+    font-size: 14px;
+}
+
+.blog-banner h1, .blog-banner-nav ul li a {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "adelle", serif;
+    text-shadow: 2px 1px 3px rgba(0,0,0,0.2);
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 850px) {
+    .blog-banner-nav {
+      display: none;
+    }
+}
+
+.blog-feature-summer-2014 {
+    background: url('images/blog-header.sjpg');
+}
+
+.blog-title {
+    font-size: 32px;
+    font-family: 'Droid Sans', Arial, sans-serif;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-description {
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Droid Sans', Arial, sans-serif;
+}
+
+#blog {
+    max-width: 940px;
+    margin: 0 auto;
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    .inline-ad-container {
+      display: none;
+    }
+    .wp-caption {
+      border-color: #EEEEEE #DDDDDD #BBBBBB;
+      border-radius: 5px;
+      border-style: solid;
+      border-width: 1px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+      display: block;
+      margin: 10px 0;
+      text-align: center;
+      background: #FFFFFF;
+      padding: 12px 12px 0 12px;
+    }
+    .wp-caption-text {
+        margin: 12px 0;
+        text-align: left;
+    }
+}
+
+.type-blog.post {
+    margin-bottom: 32px;
+    overflow: hidden;
+}
+
+.left-col, .center-col, .right-col {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.left-col {
+    width: 18%;
+    padding-top: 16px;
+    float: left;
+}
+
+.meta li {
+    margin: 0 0 6px;
+    padding: 6px 0 0;
+    font-size: 16px;
+    border-top: 1px solid #808080;
+}
+
+.meta-comment-icon {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
+
+.center-col {
+    width: 62%;
+    max-width: 560;
+    padding: 12px;
+    float: left;
+    background: #F5F5F5;
+    border: 1px solid #DDDDDD;
+    margin: 0 1%;
+    h2 {
+      margin-top: 0;
+    }
+}
+
+.right-col {
+    width: 18%;
+    padding-top: 16px;
+    float: left;
+}
+
+.related li {
+    margin: 0 0 6px;
+    padding: 6px 0 0;
+    font-size: 12px;
+    border-top: 1px solid #808080;
+}
+
+.related-timestamp {
+    color: #888888;
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.meta h3, .related h3 {
+    margin: 0;
+}
+
+.meta ul, .related ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Tablet & Smaller */
+@media only screen and (max-width: 850px) {
+    .left-col, .center-col, .right-col {
+        width: 100%;
+        margin: 0;
+        float: none;
+    }
+    .left-col {
+        padding: 0;
+    }
+}
+/* Mobile */
+@media only screen and (max-width: 500px) {
+    .blog-masthead {
+        margin: 8px 0;
+    }
+}
+
+/* =========================================================
+   Ad styles
+   ========================================================= */
+
+.l-widget.dfp {
+    border: 1px solid #CCCCCC;
+    padding: 20px;
+}
+
+.mobile-header .l-widget.dfp {
+    padding: 0;
+    border: none;
+}
+
+.mobile-footer .adslot {
+    margin: 0 auto;
+}
+
+.l-widget.dfp > div {
+    margin: 0 auto;
+}
+
+/* =========================================================
+   Inline Ad Styles
+   ========================================================= */
+
+.inline-ad-container {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.inline-ad-container.banner .notice {
+  display: none;
+}
+
+.inline-ad-container .notice {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: rgb(165, 165, 165);
+}
+
+.inline-ad-container.box {
+  display: block;
+  width: 320px;
+  float: right;
+  margin-left: 25px;
+  margin-right: 50px;
+}
+
+.inline-ad-container.box .ad-block {
+  padding: 10px;
+  background: rgb(235, 235, 235);
+}
+
+.continue-reading {
+  font-size: 15px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.continue-reading a {
+  color: rgb(163, 163, 163);
+}
+
+.continue-reading a:hover {
+  color: #777;
+  text-decoration: underline;
+}
+
+.continue-reading a:after {
+  content: "\0020";
+  margin-left: 6px;
+  position: relative;
+  top: 13px;
+  -webkit-transform: rotate(0.1deg);
+  -moz-transform: rotate(0.1deg);
+  -ms-transform: rotate(0.1deg);
+  -o-transform: rotate(0.1deg);
+  transform: rotate(0.1deg);
+  border-left: 4.08px solid transparent;
+  border-right: 4.08px solid transparent;
+  border-top: 6px solid #aaa;
+}
+
+@media only screen and (max-width: 500px) {
+  .inline-ad-container.box {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .continue-reading {
+    display: block;
+  }
+}
+
+
+/* =========================================================
+   Adsanity styles
+   ========================================================= */
+
+.ad-300x250 {
+    margin: 15px auto;
+    width: 300px;
+}
+.ad-468x60 {
+    margin: 20px auto;
+    padding: 15px 93px 15px 92px;
+    /*width: 468px;*/
+    max-width: 468px;
+    border: 1px solid #CCCCCC;
+}
+.adsanity-group {
+    border: 1px solid #CCCCCC;
+    display: inherit;
+}
+.advertisement > .adsanity-group {
+    border: none;
+    margin-bottom: 0;
+}
+.widgettitle {
+    display: none;
+}
+.blog-advertisement {
+    margin-bottom: 32px;
+    text-align: center;
+}
 
 /* === | AUTHORS ARCHIVE | ============================================================= */
 .author-info {
@@ -1448,7 +1790,6 @@ h1 a span.ams-elections-header.dingbat {
   img { float: left; margin-right: 20px; }
   p { margin-top: 0; }
 }
-
 
 
 /* === | FOOTER | ====================================================================== */
@@ -1471,10 +1812,6 @@ h1 a span.ams-elections-header.dingbat {
     }
   }
 
-  ul {
-
-  }
-
   .secondary-nav {
     @media only screen and (min-width: 500px) {
       float: left;
@@ -1487,8 +1824,9 @@ h1 a span.ams-elections-header.dingbat {
       border-top: 2px solid @Border_Gray;
       border-bottom: 1px solid @Border_Gray;
       li { 
-        display: inline-block;
-        width: 10.7%;
+        float: left;
+        width: 14.285714286%;
+        width: calc(100% / 7);
         font-size: 17px;
         h3 {
           display: inline;
@@ -1526,6 +1864,7 @@ h1 a span.ams-elections-header.dingbat {
       .other, .other2 {
         margin-left: 25%;
       }
+      margin-right: 5%;
     }
   }
 
@@ -1556,26 +1895,21 @@ h1 a span.ams-elections-header.dingbat {
       form { position: static; width: 188px; }
     }
     @media only screen and (min-width: 850px) {
-      display: inline;
+      display: block;
       width: 228px;
-      position: relative;
-      left: -27.5%;
-      top: -128px;
+      float: left;
+      margin-top: 0;
+      clear: none;
     }
     form {
-      @media only screen and (min-width: 500px) { width: 278px; margin-left: 25%; }
-      @media only screen and (min-width: 600px) { margin-left: 30%; }
-      @media only screen and (min-width: 750px) { margin-left: 31%; }
-      @media only screen and (min-width: 850px) { width: 228px; }
+      @media only screen and (min-width: 500px) { width: 278px; margin: 0 auto; }
       input:first-child { 
         @media only screen and (min-width: 500px) { width: 250px; }
-        @media only screen and (min-width: 850px) { width: 200px; }
       }
     }
   }
   .dingbat {
     font-family: "AgincourtRegular";
-    color: @UB_Blue;
     font-size: 300px;
     line-height: 220px;
     padding: 20px 15px 20px 0;
@@ -1583,13 +1917,18 @@ h1 a span.ams-elections-header.dingbat {
     text-align: center;
     @media only screen and (min-width: 500px) { clear: both; }
     @media only screen and (min-width: 850px) { 
-      display: inline;
-      margin-left: 18.4601113%; /* 199/1078 */
-      margin-top: 40px;
-      font-size: 165px;
-      line-height: 155px;
+      display: block;
+      margin: 0 auto;
+      font-size: 170px;
       padding: 0;
+      clear: none;
+      float: right;
+      overflow: none;
     }
+  }
+  .dingbat-text {
+      display: block;
+      line-height: 205px;
   }
   .copyright {
     color: @Light_Body;
@@ -1608,7 +1947,7 @@ h1 a span.ams-elections-header.dingbat {
 
   a:hover { color: @UB_Blue; }
 
-  a { text-decoration: none; }
+  a { color: @UB_Blue; text-decoration: none; }
 
 
 } // end .primaryfooter

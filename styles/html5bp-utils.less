@@ -5,13 +5,18 @@
 /* Hide all elements for large screens */
 .hide-mobile { display: none;}
 .hide-tablet { display: none; }
-
+.l-widget { display: none; }
+.mobile-header .l-widget { display: block; }
+.mobile-footer { display: block; }
 /* Hide all mobile specific elements and show larger elements */
 @media only screen and (min-width: 500px) {
+  .mobile-footer { display: none; }
   .show-mobile { display: none !important;}
   .hide-mobile { display: block; }
   .hide-tablet { display: none; }
   .hide-non-mobile { display: none; }
+  .l-widget { display: block; }
+  .hide-desktop { display: none; }
 }
 
 /* Show elements hidden from tablet layout */
@@ -25,6 +30,11 @@ img.resp,
 .entry-content img {
   max-width: 100%;
   height: auto;
+}
+.entry-content img.image-half{
+  width: 50%;
+  float: left;
+  margin: 0 25px 15px 0;
 }
 
 /* Box model for responsive borders */
@@ -59,7 +69,7 @@ img.resp,
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
-
+.contain-overflow { overflow: hidden; }
 
 
 /* ==|== print styles =======================================================
