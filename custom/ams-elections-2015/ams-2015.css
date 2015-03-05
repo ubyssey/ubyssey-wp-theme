@@ -5,6 +5,11 @@
   -o-background-size: cover;
   background-size: cover;
 }
+@media only screen and (min-width: 500px) {
+  .header-ams {
+    min-height: 722px;
+  }
+}
 .header-ams .centerheader {
   width: 100%;
   text-align: center;
@@ -22,16 +27,34 @@
 .header-ams .logo {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 35px;
-  width: 350px;
-  height: 350px;
+  padding-bottom: 55px;
+  width: 70%;
   background: url(ams-elections-2015-logo.png);
   background-size: 100%;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 500px) {
+  .header-ams .logo {
+    width: 350px;
+    height: 350px;
+    padding-bottom: 35px;
+  }
+}
+.header-ams .logo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .header-ams .countdown-wrapper {
+  display: none;
   width: 495px;
   margin: 0 auto;
   text-align: center;
+}
+@media only screen and (min-width: 500px) {
+  .header-ams .countdown-wrapper {
+    display: block;
+  }
 }
 .header-ams .countdown-wrapper p {
   text-transform: uppercase;
@@ -54,7 +77,13 @@
   float: none;
 }
 .l-main .section-header {
-  display: none;
+  text-align: center;
+}
+.small-feed .recent-feed li:nth-child(2n) {
+  background: none;
+}
+.recent-feed {
+  background: none;
 }
 .l-content {
   padding-top: 15px;

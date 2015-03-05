@@ -1,5 +1,9 @@
 .header-ams {
 
+	@media only screen and (min-width: 500px){
+		min-height: 722px;
+	}
+
 	background: url(ams-elections-2015-header.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -21,25 +25,41 @@
 			background-size: 100%;
 		}
 
-		@media only screen and (min-width: 850px){
-		}
-
-		@media only screen and (min-width: 500px){
-		}
 	}
 
 	.logo {
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: 35px;
+		padding-bottom: 55px;
 
-		width: 350px;
-		height: 350px;
+
+		width: 70%;
+
+		@media only screen and (min-width: 500px){
+			width: 350px;
+			height: 350px;
+			padding-bottom: 35px;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+
 		background: url(ams-elections-2015-logo.png);
 		background-size: 100%; 
+		background-repeat: no-repeat;
 	}
 
 	.countdown-wrapper {
+
+		display: none;
+
+		@media only screen and (min-width: 500px){
+			display: block;
+		}
+
 		width: 495px;
 		margin: 0 auto;
 		text-align: center;
@@ -63,13 +83,20 @@
 
 }
 
-
 .l-main {
 	margin: 0 auto;
 	float: none;
 	.section-header {
-		display: none;
+		text-align: center;
 	}
+}
+
+.small-feed .recent-feed li:nth-child(2n) {
+	background: none;
+}
+
+.recent-feed {
+	background: none;
 }
 
 .l-content {

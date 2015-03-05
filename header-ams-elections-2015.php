@@ -104,9 +104,11 @@
 <div id="page">
     <header class="header-ams">
         <div class="centerheader">
-            <div class="ubyssey-logo"></div>
+            <a href="/"><div class="ubyssey-logo"></div></a>
         </div>
-        <div class="logo"></div>
+        <div class="logo">
+            <img src="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2015/square.png" />
+        </div>
         <div class="countdown-wrapper">
             <div class="countdown"></div>
             <p>Until voting begins</p>

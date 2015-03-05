@@ -1,28 +1,24 @@
 
 $(function(){
-	fullHeight('.header-ams');
+	if($(window).width() >= 500){
+		fullHeight('.header-ams');
 
-	var curTime = new Date().getTime();
-	var startTime = new Date("March 9, 2015 00:00:00").getTime();
+		var curTime = new Date().getTime();
+		var startTime = new Date("March 9, 2015 00:00:00").getTime();
 
-	console.log(curTime);
-	console.log(startTime);
+		var countdownTime = parseInt((startTime - curTime) / 1000);
 
-	var countdownTime = parseInt((startTime - curTime) / 1000);
+		var clock = $('.countdown').FlipClock({});
+		clock.setTime(countdownTime);
+		clock.setCountdown(true);
 
-	console.log(countdownTime);
-
-	var clock = $('.countdown').FlipClock({});
-	clock.setTime(countdownTime);
-	clock.setCountdown(true);
-
-	$("a.continue").click(function(e) {
-		e.preventDefault();
-	    $('html, body').animate({
-	        scrollTop: $(".l-content").offset().top
-	    }, 500);
-	});
-
+		$("a.continue").click(function(e) {
+			e.preventDefault();
+		    $('html, body').animate({
+		        scrollTop: $(".l-content").offset().top
+		    }, 500);
+		});
+	}
 });
 
 function fullHeight(element){
