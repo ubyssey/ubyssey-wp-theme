@@ -8,17 +8,6 @@
  */
 
 get_header('ams-elections-2015'); ?>
-</div>
-
-<div class="l-content clearfix">
-    <div class="fw_center center-text">
-        <div class="elections-header">
-            <a href="<?php $page = get_page_by_title('AMS Elections 2015'); echo get_permalink($page->ID) ?>"><img class="elections-header" src="<?php $dir = get_template_directory_uri(); echo $dir; ?>/custom/ams-elections-2015/header-top.png"></img></a>
-            <p class="countdown"></p>
-            <img src="<?php echo $dir; ?>/custom/ams-elections-2015/header-bottom.png"></img>
-        </div>
-    </div>
-</div>
 
 <div class="l-content l-contained clearfix">
     <div class="l-main section-front">

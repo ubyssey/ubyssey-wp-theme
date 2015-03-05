@@ -1,0 +1,153 @@
+.header-ams {
+  background: url(ams-elections-2015-header.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.header-ams .centerheader {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.55);
+  margin-bottom: 45px;
+}
+.header-ams .centerheader .ubyssey-logo {
+  width: 130px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(ubyssey-logo.png);
+  background-size: 100%;
+}
+.header-ams .logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  width: 350px;
+  height: 350px;
+  background: url(ams-elections-2015-logo.png);
+  background-size: 100%;
+}
+.header-ams .countdown-wrapper {
+  width: 495px;
+  margin: 0 auto;
+  text-align: center;
+}
+.header-ams .countdown-wrapper p {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "lft-etica";
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+.header-ams .countdown-wrapper a.continue {
+  display: inline-block;
+}
+.header-ams .countdown-wrapper a.continue:hover {
+  opacity: 0.5;
+}
+.l-main {
+  margin: 0 auto;
+  float: none;
+}
+.l-main .section-header {
+  display: none;
+}
+.l-content {
+  padding-top: 15px;
+}
+.l-secondary {
+  display: none;
+}
+h1.elections {
+  font-family: "lft-etica";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+@-moz-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  60% {
+    -moz-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  60% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  60% {
+    -moz-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+.arrow-down {
+  display: inline-block;
+  background: url(down-arrow.svg);
+  width: 25px;
+  height: 25px;
+  background-size: 100%;
+}
+.flip-clock-label {
+  display: none;
+}
+.flip-clock-wrapper ul li a div div.inn {
+  font-size: 40px;
+  background: #fff;
+  color: #252525;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.58);
+}
+.flip-clock-dot {
+  background: #fff;
+}

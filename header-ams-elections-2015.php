@@ -18,7 +18,8 @@
     <title><?php if(!is_home()){ wp_title( '|', true, 'right'); echo ' | '; } ?>The Ubyssey, UBC's official student newspaper</title>
 
     <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
-    <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2014/style.css">
+    <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2015/js/flipclock/flipclock.css">
+    <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2015/ams-2015.css">
 
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
@@ -29,8 +30,8 @@
     <!-- jQuery loaded here just so that I can write inline for dev @TODO: fix all scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-    <script src="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2014/timer/jquery.countdown.js"></script>
-    <script src="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2014/script.js"></script>
+    <script src="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2015/js/flipclock/flipclock.min.js"></script>
+    <script src="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2015/ams-2015.js"></script>
 
     <!-- fitvid - responsive videos -->
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.fitvids-ck.js"></script>
@@ -101,40 +102,16 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div id="page">
-    <header class="l-masthead">
-        <div class="l-contained clearfix">
-            <div class="l-leftheader hide-tablet">
-                <div class="date-update">
-                    <span class="date"><?php ub_pst_time(); ?></span><br />
-                    <span class="updated">Last updated: <span class="update-time">
-                        <?php 	// Grab the time since the last post was added/updated
-                                $the_query = new WP_Query( array( 'posts_per_page' => '1', 'post_type' => array( 'news', 'culture', 'opinion', 'features', 'sports', 'video', 'photo') ) );
-                                while ( $the_query->have_posts() ) : $the_query->the_post();
-                                    echo get_time_since_posted();
-                                endwhile;
-                                // Reset Post Data
-                                wp_reset_postdata();
-                        ?>
-                    </span></span>
-                </div>
-            </div><!-- .l-leftheader -->
-            <div class="l-rightheader hide-tablet">
-                <nav class="second-nav hide-mobile">
-                    <ul>
-                        <li><a href="/advertise-with-us/">Advertise</a></li>
-                        <li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-                        <li><a href="/about/">About</a></li>
-                        <li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-                        <li><a href="/contact/">Contact</a></li>
-                    </ul>
-                </nav>
-            </div><!-- .l-rightheader -->
-            <div class="l-centerheader">
-                <h1 class="branding">
-                    <a href="/"><span class="dingbat">U</span><span class="minion">THE UBYSSEY</span></a>
-                </h1>
-            </div>
-        </div><!-- .l-contained -->
+    <header class="header-ams">
+        <div class="centerheader">
+            <div class="ubyssey-logo"></div>
+        </div>
+        <div class="logo"></div>
+        <div class="countdown-wrapper">
+            <div class="countdown"></div>
+            <p>Until voting begins</p>
+            <a class="continue bounce" href="#">
+                <div class="arrow-down"></div>
+            </a>
+        </div>
     </header><!-- .l-masthead -->
-
-    <div class="l-content l-contained clearfix">
