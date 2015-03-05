@@ -15,7 +15,7 @@
             if( $count === 1 ){ $zindex = 'style="z-index: 2;"'; }
             else { $zindex = 'style="z-index: 1;"'; }
             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'featured-slider' );
-            echo '<img src="' . $image[0] . '" alt="" class="resp slide" id="slide-' . $count . '"' . $zindex . '>';
+            echo '<a href="' . get_post_meta( get_the_ID(), 'url', true) . '"><img src="' . $image[0] . '" alt="" class="resp slide" id="slide-' . $count . '"' . $zindex . '></a>';
             $count = $count + 1;
         endwhile;
         wp_reset_postdata(); ?>
