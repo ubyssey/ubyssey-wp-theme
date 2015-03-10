@@ -58,8 +58,6 @@ get_header('ams-elections-2015'); ?>
                 <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Previous page', 'ubyssey' ) ); ?></div>
                 <div class="nav-next"><?php previous_posts_link( __( 'Next Page <span class="meta-nav">&rarr;</span>', 'ubyssey' ) ); ?></div>
             </nav><!-- .bottom-nav -->
-
-            <?php wp_reset_postdata(); ?>
         </div>
     </div><!-- .l-main -->
 <?php get_footer(); ?>

@@ -3,14 +3,14 @@ $(function(){
 	if($(window).width() >= 500){
 		fullHeight('.header-ams');
 
-		var curTime = new Date().getTime();
-		var startTime = new Date("March 9, 2015 00:00:00").getTime();
+		//var curTime = new Date().getTime();
+		//var startTime = new Date("March 9, 2015 00:00:00").getTime();
 
-		var countdownTime = parseInt((startTime - curTime) / 1000);
+		//var countdownTime = parseInt((startTime - curTime) / 1000);
 
-		var clock = $('.countdown').FlipClock({});
-		clock.setTime(countdownTime);
-		clock.setCountdown(true);
+		//var clock = $('.countdown').FlipClock({});
+		//clock.setTime(countdownTime);
+		//clock.setCountdown(true);
 
 		$("a.continue").click(function(e) {
 			e.preventDefault();

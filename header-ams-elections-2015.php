@@ -110,8 +110,6 @@
             <img src="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2015/square.png" />
         </div>
         <div class="countdown-wrapper">
-            <div class="countdown"></div>
-            <p>Until voting begins</p>
             <a class="continue bounce" href="#">
                 <div class="arrow-down"></div>
             </a>
