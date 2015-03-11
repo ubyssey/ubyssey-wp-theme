@@ -134,8 +134,8 @@ ul.elections-categories {
   list-style-type: none;
   margin: 0;
   padding-left: 0;
-  padding-top: 10px;
-  padding-bottom: 35px;
+  padding-top: 5px;
+  padding-bottom: 30px;
   border-bottom: 1px dotted #cccccc;
 }
 ul.elections-categories li {
@@ -148,6 +148,8 @@ ul.elections-categories li a {
   text-transform: uppercase;
   padding: 10px 14px;
   border-radius: 4px;
+  display: block;
+  margin: 5px 0;
 }
 ul.elections-categories li a.active,
 ul.elections-categories li a:hover {

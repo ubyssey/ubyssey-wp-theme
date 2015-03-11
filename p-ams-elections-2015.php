@@ -27,10 +27,10 @@ if( isset($_GET['cat']) ){
         <div class="section-header">
             <h1 class="elections">The Stories</h1>
             <ul class="elections-categories">
-                <li><a class="<?php echo ($cat_slug == 'all' ? 'active' : ''); ?>" href="?cat=all">All</a></li>
-                <li><a class="<?php echo ($cat_slug == 'debate-recap' ? 'active' : ''); ?>" href="?cat=debate-recap">Debate recaps</a></li>
-                <li><a class="<?php echo ($cat_slug == 'race-breakdown' ? 'active' : ''); ?>" href="?cat=race-breakdown">Race breakdowns</a></li>
-                <li><a class="<?php echo ($cat_slug == 'results' ? 'active' : ''); ?>" href="?cat=results">Results</a></li>
+                <li><a class="<?php echo ($cat_slug == 'all' ? 'active' : ''); ?>" href="http://ubyssey.ca/ams-elections-2015/?cat=all">All</a></li>
+                <li><a class="<?php echo ($cat_slug == 'debate-recap' ? 'active' : ''); ?>" href="http://ubyssey.ca/ams-elections-2015/?cat=debate-recap">Debate recaps</a></li>
+                <li><a class="<?php echo ($cat_slug == 'race-breakdown' ? 'active' : ''); ?>" href="http://ubyssey.ca/ams-elections-2015/?cat=race-breakdown">Race breakdowns</a></li>
+                <li><a class="<?php echo ($cat_slug == 'results' ? 'active' : ''); ?>" href="http://ubyssey.ca/ams-elections-2015/?cat=results">Results</a></li>
             </ul>
         </div>
         <div class="small-feed recent-feed">
@@ -38,10 +38,13 @@ if( isset($_GET['cat']) ){
                 <?php
                 // Get most recent news, opinion, or features articles with the ams-elections category
 
+                $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+
                 $args = array(
                     'post_type' => array('news', 'opinion', 'features', 'ams'),
                     'year' => 2015,
                     'posts_per_page' => '10',
+                    'paged' => $paged,
                     'tax_query' => array(
                         'relation' => 'OR',
                         array(
@@ -76,8 +79,8 @@ if( isset($_GET['cat']) ){
             </ul>
 
             <nav class="bottom-nav clearfix">
-                <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Previous page', 'ubyssey' ) ); ?></div>
-                <div class="nav-next"><?php previous_posts_link( __( 'Next Page <span class="meta-nav">&rarr;</span>', 'ubyssey' ) ); ?></div>
+                <div class="nav-previous"><?php echo next_posts_link( '<span class="meta-nav">&larr;</span> Previous page', $the_query->max_num_pages ); ?></div>
+                <div class="nav-next"><?php echo previous_posts_link( 'Next Page <span class="meta-nav">&rarr;</span>' ); ?></div>
             </nav><!-- .bottom-nav -->
             <?php wp_reset_postdata(); ?>
         </div>
