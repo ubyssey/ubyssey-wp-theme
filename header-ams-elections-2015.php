@@ -31,7 +31,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
     <script src="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2015/js/flipclock/flipclock.min.js"></script>
-    <script src="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2015/ams-2015.js"></script>
 
     <!-- fitvid - responsive videos -->
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.fitvids-ck.js"></script>
@@ -110,8 +109,5 @@
             <img src="<?php bloginfo( 'template_url' ); ?>/custom/ams-elections-2015/square.png" />
         </div>
         <div class="countdown-wrapper">
-            <a class="continue bounce" href="#">
-                <div class="arrow-down"></div>
-            </a>
         </div>
     </header><!-- .l-masthead -->

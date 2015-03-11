@@ -5,11 +5,6 @@
   -o-background-size: cover;
   background-size: cover;
 }
-@media only screen and (min-width: 500px) {
-  .header-ams {
-    min-height: 722px;
-  }
-}
 .header-ams .centerheader {
   width: 100%;
   text-align: center;
@@ -37,7 +32,6 @@
   .header-ams .logo {
     width: 350px;
     height: 350px;
-    padding-bottom: 35px;
   }
 }
 .header-ams .logo img {
@@ -73,10 +67,9 @@
   opacity: 0.5;
 }
 .l-main {
-  margin: 0 auto;
-  float: none;
+  float: left;
 }
-.l-main .section-header {
+.section-header {
   text-align: center;
 }
 .small-feed .recent-feed li:nth-child(2n) {
@@ -88,13 +81,78 @@
 .l-content {
   padding-top: 15px;
 }
-.l-secondary {
-  display: none;
+.candidates ul {
+  padding: 0;
+}
+.candidates ul:first-child {
+  margin-top: 0;
+}
+.candidates li {
+  list-style: none;
+  /*margin-top: 12px;*/
+  padding: 6px;
+  display: block;
+  /*width: 100%;*/
+}
+.candidates li:hover {
+  background: #eeeeee;
+  border-radius: 6px;
+}
+.candidates li:first-child {
+  /*margin-top: 0;*/
+}
+.candidates li.small {
+  display: inline-block;
+  /*width: 48px;*/
+}
+.candidates img {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid #008DC2;
+}
+.position {
+  margin: 12px 0;
+  display: block;
+  font-size: 12px;
+  font-family: 'lft-etica', Arial, sans-serif;
+  color: #2881AB;
+  text-transform: uppercase;
+}
+.candidate-name {
+  margin-left: 12px;
+  font-size: 24px;
+  vertical-align: middle;
 }
 h1.elections {
   font-family: "lft-etica";
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+ul.elections-categories {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  padding-top: 10px;
+  padding-bottom: 35px;
+  border-bottom: 1px dotted #cccccc;
+}
+ul.elections-categories li {
+  display: inline-block;
+  margin: 0 8px;
+}
+ul.elections-categories li a {
+  font-family: "lft-etica";
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  border-radius: 4px;
+}
+ul.elections-categories li a.active,
+ul.elections-categories li a:hover {
+  background: #194d6a;
+  color: white;
 }
 @-moz-keyframes bounce {
   0%,
