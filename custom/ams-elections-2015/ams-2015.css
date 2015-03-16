@@ -68,6 +68,10 @@
 }
 .l-main {
   float: left;
+  margin-bottom: 25px;
+}
+.l-secondary {
+  padding: 0 10px;
 }
 .section-header {
   text-align: center;

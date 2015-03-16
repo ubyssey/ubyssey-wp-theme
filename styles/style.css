@@ -2031,18 +2031,6 @@ a {
   margin-left: 3%;
   margin-right: 3%;
 }
-#ams-elections-box header {
-  background: #840000;
-  border-color: #cccccc;
-}
-#ams-elections-box h2 a {
-  color: #fff;
-  font-family: MinionProBold, sans-serif;
-  font-size: 24px;
-}
-#ams-elections-box .featured {
-  border-color: #840000;
-}
 .l-secondary .ams-elections {
   margin-top: 20px;
 }
