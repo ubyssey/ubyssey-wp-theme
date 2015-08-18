@@ -325,7 +325,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     font-family: 'adelle', sans-serif;
     font-style: oblique;
     font-size: 50px;
-    width: 750px;
+    width: 92%;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
@@ -504,15 +505,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
         font-size: 20px;
     }
     .l-fullwidth .wp-caption-text, .l-fullwidth-story .wp-caption-text {
-        margin-right: 0;
-        margin-left: 0;
+        margin-right: auto;
+        margin-left: auto;
         width: auto;
     }
     .fw_quote {
         font-size: 24px;
     }
+    .fw_quote, .fw_quote_source {
+      margin-left: auto;
+      margin-right: auto;
+      width: 92%;
+    }
     .l-fullwidth-story .wp-caption-text {
-        width: 100%;
+        width: 92%;
     }
 
     .fw_pano {
