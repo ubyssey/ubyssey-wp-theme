@@ -245,3 +245,12 @@ function custom_post_author_archive( &$query ) {
 
     remove_action( 'pre_get_posts', 'custom_post_author_archive' ); // run once!
 }
+
+/**
+* Dynamically increase allowed memory limit for export.
+*
+*/
+function my_export_wp() {
+  ini_set('memory_limit', '1024M');
+}
+add_action('export_wp', 'my_export_wp');
